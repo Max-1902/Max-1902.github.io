@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2024"/><stop offset="1" stop-color="#2D3032"/></linearGradient>
+    <radialGradient id="earth" cx=".68" cy=".28" r=".8"><stop offset="0" stop-color="#93A69E"/><stop offset=".55" stop-color="#5A6D69"/><stop offset="1" stop-color="#262F2F"/></radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <g fill="#EDE5D6">
+    <circle cx="80" cy="90" r="2"/><circle cx="210" cy="160" r="1.5"/><circle cx="330" cy="70" r="2.5"/><circle cx="470" cy="130" r="1.5"/><circle cx="700" cy="80" r="2"/>
+    <circle cx="140" cy="300" r="1.5"/><circle cx="380" cy="260" r="2"/><circle cx="560" cy="330" r="1.5"/><circle cx="740" cy="290" r="2.5"/><circle cx="60" cy="460" r="2"/>
+    <circle cx="250" cy="420" r="1.5"/><circle cx="690" cy="470" r="1.5"/><circle cx="460" cy="560" r="2"/><circle cx="760" cy="620" r="1.5"/><circle cx="600" cy="720" r="2"/>
+    <circle cx="720" cy="850" r="2"/><circle cx="520" cy="900" r="1.5"/><circle cx="300" cy="200" r="1"/><circle cx="620" cy="200" r="1"/><circle cx="160" cy="210" r="1"/>
+  </g>
+  <circle cx="600" cy="220" r="42" fill="#E9DFCF"/>
+  <circle cx="170" cy="930" r="320" fill="url(#earth)"/>
+  <g fill="none" stroke="#D9C7A8" stroke-width="2" transform="rotate(-18 400 520)">
+    <ellipse cx="400" cy="520" rx="320" ry="116" opacity=".5"/>
+    <ellipse cx="400" cy="520" rx="230" ry="82" opacity=".35" stroke-dasharray="6 10"/>
+  </g>
+  <line x1="612" y1="372" x2="560" y2="400" stroke="#D4A27A" stroke-width="2" opacity=".5"/>
+  <circle cx="622" cy="366" r="11" fill="#D4A27A"/>
+</svg>

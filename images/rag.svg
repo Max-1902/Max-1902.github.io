@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#D6C3A4"/>
+  <g stroke="#C8B392" stroke-width="3" opacity=".7" fill="none"><path d="M0 120 C200 110 500 135 800 118"/><path d="M0 330 C260 320 520 345 800 326"/><path d="M0 560 C220 552 540 572 800 556"/><path d="M0 880 C300 870 520 890 800 874"/></g>
+  <g transform="rotate(-7 350 450)"><rect x="178" y="222" width="360" height="470" fill="#B49D7E" opacity=".45"/><rect x="170" y="212" width="360" height="470" fill="#F1ECE2"/></g>
+  <g transform="rotate(4 420 480)">
+    <rect x="258" y="300" width="360" height="470" fill="#B49D7E" opacity=".45"/>
+    <rect x="250" y="290" width="360" height="470" fill="#FAF6EF"/>
+    <text x="290" y="372" font-family="Georgia, serif" font-size="58" fill="#2F2A25">10-K</text>
+    <text x="292" y="402" font-family="Georgia, serif" font-size="16" fill="#8A8073" letter-spacing="2">ANNUAL REPORT</text>
+    <g fill="#DDD4C6"><rect x="290" y="440" width="280" height="8"/><rect x="290" y="462" width="250" height="8"/><rect x="290" y="506" width="270" height="8"/><rect x="290" y="528" width="230" height="8"/><rect x="290" y="572" width="280" height="8"/><rect x="290" y="594" width="200" height="8"/><rect x="290" y="638" width="260" height="8"/><rect x="290" y="660" width="240" height="8"/></g>
+    <rect x="288" y="482" width="268" height="14" fill="#E9B98E" opacity=".9"/><rect x="290" y="485" width="260" height="8" fill="#C9A07C"/>
+  </g>
+  <circle cx="530" cy="560" r="96" fill="#FFFFFF" opacity=".2" stroke="#2F2A25" stroke-width="14"/>
+  <line x1="600" y1="630" x2="700" y2="730" stroke="#A9532F" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="170" cy="830" r="74" fill="#EEE8DD"/><circle cx="170" cy="830" r="54" fill="#6A4934"/><rect x="236" y="818" width="40" height="24" rx="12" fill="#EEE8DD"/>
+</svg>

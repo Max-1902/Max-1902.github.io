@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#28302F"/><stop offset="1" stop-color="#635E50"/></linearGradient>
+    <pattern id="win" width="14" height="20" patternUnits="userSpaceOnUse"><rect x="4" y="5" width="4" height="7" fill="#E5C58E"/></pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <circle cx="640" cy="170" r="30" fill="#E9DFCC" opacity=".85"/>
+  <g id="towers" fill="#151A19">
+    <rect x="40" y="470" width="70" height="230"/><rect x="100" y="520" width="50" height="180"/>
+    <rect x="150" y="330" width="60" height="370"/><polygon points="150,330 180,272 210,330"/>
+    <path d="M260 700 V292 A35 32 0 0 1 330 292 V700Z"/><rect x="293" y="200" width="3" height="64"/>
+    <rect x="380" y="200" width="80" height="500"/><rect x="418" y="116" width="4" height="86"/>
+    <rect x="480" y="330" width="60" height="370"/><rect x="560" y="380" width="70" height="320"/>
+    <rect x="640" y="300" width="50" height="400"/><rect x="700" y="450" width="80" height="250"/>
+  </g>
+  <g fill="url(#win)" opacity=".38">
+    <rect x="156" y="350" width="48" height="340"/><rect x="266" y="310" width="58" height="380"/><rect x="386" y="220" width="68" height="470"/>
+    <rect x="486" y="350" width="48" height="340"/><rect x="566" y="400" width="58" height="290"/><rect x="646" y="320" width="38" height="370"/>
+  </g>
+  <rect y="700" width="800" height="300" fill="#222A29"/>
+  <g stroke="#E5C58E" stroke-width="3" stroke-linecap="round" opacity=".35">
+    <line x1="170" y1="730" x2="196" y2="730"/><line x1="280" y1="745" x2="316" y2="745"/><line x1="396" y1="725" x2="444" y2="725"/><line x1="404" y1="770" x2="434" y2="770"/>
+    <line x1="494" y1="752" x2="526" y2="752"/><line x1="576" y1="736" x2="612" y2="736"/><line x1="652" y1="790" x2="676" y2="790"/><line x1="290" y1="810" x2="306" y2="810"/><line x1="410" y1="840" x2="428" y2="840"/>
+  </g>
+</svg>
