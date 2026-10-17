@@ -90,6 +90,7 @@ figure { margin: 0; }
 .role { font-weight: 500; font-size: 17px; margin: 0 0 14px; }
 .role span { display: block; font-weight: 400; font-size: 13px; color: var(--stone); margin-top: 2px; }
 .chapter p:not([class]) { color: var(--stone); margin: 0; max-width: 520px; }
+.chapter-press { display: inline-block; margin-top: 24px; }
 .chapter ul { max-width: 540px; border-top: 1px solid var(--line); }
 .chapter ul li { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--stone); font-size: 15px; }
 .stint + .stint { margin-top: 32px; }
