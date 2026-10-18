@@ -20,10 +20,11 @@ $$('.reveal').forEach(el => revealObserver.observe(el));
 // Mobile menu
 const menuButton = $('.menu-toggle');
 const nav = $('.nav');
-const closeMenu = () => { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); };
+const closeMenu = () => { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); document.documentElement.classList.remove('menu-open'); };
 menuButton.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(open));
+  document.documentElement.classList.toggle('menu-open', open);
 });
 
 // Curtain transition between sections: cover, jump, reveal.

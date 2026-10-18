@@ -30,7 +30,11 @@ figure { margin: 0; }
 
 /* ---------- Header ---------- */
 .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 20px var(--gutter); transition: background .4s, box-shadow .4s, padding .4s; }
-.site-header.is-solid { background: rgba(241,236,228,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); padding-block: 14px; }
+/* The blur sits on a pseudo-element: backdrop-filter on the header itself would trap the fixed mobile menu inside the header on iOS. */
+.site-header::before { content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0; background: rgba(241,236,228,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); transition: opacity .4s; }
+.site-header.is-solid { padding-block: 14px; }
+.site-header.is-solid::before { opacity: 1; }
+.menu-open { overflow: hidden; }
 .logo { font: 400 24px/1 var(--serif); }
 .nav { display: flex; gap: clamp(20px, 3vw, 44px); margin-left: auto; }
 .cv-btn { margin-left: clamp(20px, 3vw, 44px); display: inline-flex; align-items: center; gap: 8px; font: 500 13px/1 var(--sans); color: var(--bone); background: var(--ink); padding: 11px 18px; border-radius: 99px; white-space: nowrap; transition: background .4s var(--ease); }
@@ -229,6 +233,13 @@ figure { margin: 0; }
   .hops a { font-size: 10px; }
   .hops a span { visibility: hidden; }
   .hops li.is-current a span { visibility: visible; }
+  /* Smaller tilts so rotated screenshots stay inside the screen */
+  .phones img:nth-child(1) { left: 2%; --r: rotate(-3deg); }
+  .phones img:nth-child(3) { right: 2%; --r: rotate(3deg); }
+  .docs img:nth-child(1) { left: 3%; --r: rotate(-2deg); }
+  .docs img:nth-child(2) { right: 3%; --r: rotate(2deg); }
+  .shots img:nth-child(2) { left: 2%; --r: rotate(-2deg); }
+  .shots img:nth-child(3) { right: 2%; --r: rotate(2deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
