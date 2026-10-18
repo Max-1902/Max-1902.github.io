@@ -4,8 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F1ECE4">
-  <meta name="description" content="Maximilian Wojciechowski — MS Computer Science at DePaul University, BS in Finance. Trading, machine learning for financial markets, and AI engineering.">
+  <meta name="description" content="Maximilian Wojciechowski — MS Computer Science at DePaul University, former DekaBank trading-desk intern. Seeking Summer 2027 internships in AI engineering.">
   <title>Maximilian Wojciechowski</title>
+  <link rel="canonical" href="https://max-1902.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://max-1902.github.io/">
+  <meta property="og:title" content="Maximilian Wojciechowski — AI engineering">
+  <meta property="og:description" content="MS Computer Science at DePaul, former DekaBank trading-desk intern. Seeking Summer 2027 internships in AI engineering.">
+  <meta property="og:image" content="https://max-1902.github.io/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Maximilian Wojciechowski — AI engineering, Summer 2027 internships">
+  <meta name="twitter:card" content="summary_large_image">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +29,8 @@
   <header class="site-header">
     <a class="logo" href="#top" data-label="Welcome">M. Wojciechowski</a>
     <nav class="nav" id="nav">
-      <a href="#journey" data-label="The route">Journey</a>
       <a href="#work" data-label="Projects">Projects</a>
+      <a href="#journey" data-label="The route">Journey</a>
       <a href="#details" data-label="Details">Details</a>
       <a href="#contact" data-label="Contact">Contact</a>
     </nav>
@@ -45,18 +55,72 @@
     <!-- Hero: the arch opens up into a full-screen image as you scroll -->
     <section class="hero">
       <div class="hero-stage">
-        <p class="hero-kicker hero-fade">Portfolio — Chicago, IL</p>
+        <p class="hero-kicker hero-fade">AI engineering — Chicago, IL</p>
         <h1 class="hero-name">
           <span class="hero-line hero-line-1 hero-fade">Maximilian</span>
           <span class="hero-line hero-line-2 hero-fade"><em>Wojciechowski</em></span>
         </h1>
         <figure class="hero-arch"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
-        <p class="hero-intro hero-fade">MS Computer Science at DePaul University, BS in Finance. Research interests in trading, machine learning for financial markets, and AI engineering.</p>
-        <a class="hero-cue hero-fade" href="#journey" data-label="The route">Begin the journey <span>↓</span></a>
+        <p class="hero-intro hero-fade">MS Computer Science at DePaul. At DekaBank I built a news classifier now going into production and tested an LLM term-sheet tool. <strong>Seeking Summer 2027 internships in AI engineering.</strong></p>
+        <a class="hero-cue hero-fade" href="#work" data-label="Projects">See the work <span>↓</span></a>
         <div class="hero-overlay">
-          <p>Germany — Wichita — New Orleans — Berlin — Frankfurt — Chicago</p>
-          <h2>From Germany<br><em>to Chicago.</em></h2>
+          <p>Seeking Summer 2027 internships</p>
+          <h2>AI engineering,<br><em>measured.</em></h2>
         </div>
+      </div>
+    </section>
+
+    <!-- Projects: a horizontal gallery, scrolled like walking through rooms -->
+    <section class="work" id="work">
+      <div class="work-sticky">
+        <div class="work-track">
+          <div class="work-intro">
+            <p class="kicker">Selected projects</p>
+            <h2>Things<br><em>I've built.</em></h2>
+            <p class="work-hint">Keep scrolling <span>→</span></p>
+          </div>
+
+          <article class="room">
+            <figure><img src="images/rag.svg" alt="Illustration of a 10-K report under a magnifying glass"></figure>
+            <div class="room-text">
+              <p class="room-no">No. 01</p>
+              <h3>Local RAG &amp; Evaluation Pipeline</h3>
+              <p>A fully local RAG pipeline over FY2025–26 10-K filings of Microsoft, NVIDIA, Tesla, Lockheed Martin and BlackRock, with hybrid dense + BM25 retrieval and no external API calls. The key test: an oracle that hands the model only the chunks containing the answer scored the same as normal retrieval, so the lost points come from generation, not retrieval. Retrieval hit@5 was 0.92 (95% CI 0.86–0.98).</p>
+              <dl class="stats">
+                <div><dt>−0.003</dt><dd>Oracle minus RAG answer score (95% CI ±0.10): retrieval isn't the bottleneck</dd></div>
+                <div><dt>0.87</dt><dd>Answer score on 65 hand-verified questions (95% CI 0.79–0.94)</dd></div>
+              </dl>
+              <p class="tags">Python · MLX · Llama 3.1 8B · Chroma</p>
+              <a class="link" href="https://github.com/Max-1902/local-rag-10k-eval" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="room">
+            <figure><img src="images/macro.svg" alt="Illustration of hills shaped like a GDP chart with a dashed forecast"></figure>
+            <div class="room-text">
+              <p class="room-no">No. 02</p>
+              <h3>Macroeconomic Forecasting System</h3>
+              <p>A macro dashboard on 50+ World Bank/OWID series per country with in-browser AR(2) forecasts, backtested out of sample against a naive “no change” forecast and the IMF. Across all 193 economies scored, the model's GDP wins over naive don't survive a multiple-testing correction, and since 2005 its median error is higher than naive's. The IMF beats it in 44 of 52 countries.</p>
+              <dl class="stats">
+                <div><dt>140/193</dt><dd>Economies where AR(2) beats naive on mean GDP error</dd></div>
+                <div><dt>0</dt><dd>Of those wins significant after Benjamini–Hochberg correction</dd></div>
+              </dl>
+              <p class="tags">TypeScript · World Bank API · Diebold–Mariano tests</p>
+              <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="room">
+            <figure><img src="images/supplements.svg" alt="Illustration of a supplement bottle and capsules beside a quiz card"></figure>
+            <div class="room-text">
+              <p class="room-no">No. 03</p>
+              <h3>TrueSupplements</h3>
+              <p>A supplement recommender: a five-question quiz feeds a deterministic rule engine shared by frontend and backend, results are cached in Redis, and an LLM (Llama 3.1) is called only when the rules don't cover a profile, so most answers stay predictable and testable.</p>
+              <p class="tags">TypeScript · React · Express · Prisma · Redis · Llama 3.1</p>
+            </div>
+          </article>
+        </div>
+        <div class="work-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 
@@ -144,7 +208,7 @@
             <h3>Frankfurt</h3>
             <p class="role">Intern, Structuring &amp; Derivatives Trading · DekaBank</p>
             <ul>
-              <li>Developed a Python algorithm that classifies thousands of dpa news articles by issuer, category and country and maps them to client portfolios via LEI/ISIN/WKN, with a backtesting engine to validate its output</li>
+              <li>Developed a Python algorithm that classifies thousands of dpa news articles by issuer, category and country and maps them to client portfolios via LEI/ISIN/WKN, with a backtesting engine to validate its output; now being migrated into production</li>
               <li>Built a Java rule engine automating counterparty classification under EU CRR, encoding 40+ bank-specific rules, with a test suite for edge cases and rule priorities</li>
               <li>Code-reviewed and performance-tested an LLM-based term-sheet comparison tool</li>
               <li>Built an interactive world map prototype for the internal trading dashboard (TypeScript), presented to senior engineers, and documented AI-assisted coding workflows</li>
@@ -159,67 +223,12 @@
             <p class="role">MS Computer Science · DePaul University</p>
             <ul>
               <li>GPA 3.8 / 4.0</li>
-              <li>Research interests: trading, machine learning for financial markets, AI engineering</li>
+              <li>Focus: AI engineering; also interested in machine learning for financial markets</li>
               <li>Data Structures I–II, Computer Systems I–II, Discrete Mathematics, Python Programming</li>
               <li>DePaul Computer Science Society</li>
             </ul>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- Projects: a horizontal gallery, scrolled like walking through rooms -->
-    <section class="work" id="work">
-      <div class="work-sticky">
-        <div class="work-track">
-          <div class="work-intro">
-            <p class="kicker">Selected projects</p>
-            <h2>Things<br><em>I've built.</em></h2>
-            <p class="work-hint">Keep scrolling <span>→</span></p>
-          </div>
-
-          <article class="room">
-            <figure><img src="images/rag.svg" alt="Illustration of a 10-K report under a magnifying glass"></figure>
-            <div class="room-text">
-              <p class="room-no">No. 01</p>
-              <h3>Local RAG &amp; Evaluation Pipeline</h3>
-              <p>A fully local RAG pipeline over FY2025–26 10-K filings of Microsoft, NVIDIA, Tesla, Lockheed Martin and BlackRock, using hybrid dense + BM25 retrieval with no external API calls. Oracle tests showed generation, not retrieval, was the bottleneck.</p>
-              <dl class="stats">
-                <div><dt>0.87</dt><dd>Answer score, vs. 0.24 without retrieval</dd></div>
-                <div><dt>0.92</dt><dd>Hit@5 on 65 hand-verified questions</dd></div>
-              </dl>
-              <p class="tags">Python · MLX · Llama 3.1 8B · Chroma</p>
-              <a class="link" href="https://github.com/Max-1902/local-rag-10k-eval" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
-            </div>
-          </article>
-
-          <article class="room">
-            <figure><img src="images/macro.svg" alt="Illustration of hills shaped like a GDP chart with a dashed forecast"></figure>
-            <div class="room-text">
-              <p class="room-no">No. 02</p>
-              <h3>Macroeconomic Forecasting System</h3>
-              <p>A macro dashboard on 50+ World Bank/OWID series per country with in-browser AR(2) GDP forecasts and 1,000+ tests. Backtested against a naive baseline across 24 countries, the model cut error 21–25% for Poland, Turkey and Indonesia but lost for China, Japan and Korea.</p>
-              <dl class="stats">
-                <div><dt>24</dt><dd>Countries backtested against a naive baseline</dd></div>
-                <div><dt>44/52</dt><dd>Countries where IMF forecasts beat the model (1.89 vs. 2.26 pp)</dd></div>
-              </dl>
-              <p class="tags">TypeScript · World Bank API</p>
-              <a class="link" href="https://github.com/Max-1902" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
-            </div>
-          </article>
-
-          <article class="room">
-            <figure><img src="images/neo.svg" alt="Illustration of an asteroid on an orbit around Earth"></figure>
-            <div class="room-text">
-              <p class="room-no">No. 03</p>
-              <h3>NEOTracker</h3>
-              <p>An iOS app that turns NASA near-Earth-object data into real-time close-approach tracking with 3D orbits, plus a GPS-based night-sky planner computing planet positions and rise/set times with Meeus/VSOP87 algorithms.</p>
-              <p class="tags">Swift · SwiftUI · SceneKit · NASA APIs</p>
-              <a class="link" href="https://github.com/Max-1902" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
-            </div>
-          </article>
-        </div>
-        <div class="work-progress" aria-hidden="true"><span></span></div>
       </div>
     </section>
 
@@ -240,6 +249,7 @@
       <div class="contact-inner reveal">
         <p class="kicker">The next chapter</p>
         <h2>Let's <em>talk.</em></h2>
+        <p class="contact-note">Seeking Summer 2027 internships in AI engineering.</p>
         <a class="contact-email" href="mailto:mwojcie4@depaul.edu">mwojcie4@depaul.edu</a>
         <div class="contact-links">
           <a href="https://github.com/Max-1902" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>

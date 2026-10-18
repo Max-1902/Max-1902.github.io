@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#C9CDB8"/>
+  <g stroke="#B9BEA6" stroke-width="3" opacity=".7" fill="none"><path d="M0 140 C220 128 520 152 800 136"/><path d="M0 380 C260 368 540 392 800 374"/><path d="M0 900 C300 890 520 910 800 894"/></g>
+  <g transform="rotate(-6 250 470)">
+    <rect x="118" y="252" width="280" height="400" fill="#9EA38A" opacity=".45"/>
+    <rect x="110" y="242" width="280" height="400" fill="#FAF6EF"/>
+    <text x="140" y="300" font-family="Georgia, serif" font-size="16" fill="#8A8073" letter-spacing="2">QUESTION 3 / 5</text>
+    <g fill="#DDD4C6"><rect x="140" y="326" width="220" height="8"/><rect x="140" y="346" width="170" height="8"/></g>
+    <g fill="none" stroke="#B9AE9C" stroke-width="3"><rect x="140" y="390" width="220" height="42" rx="21"/><rect x="140" y="510" width="220" height="42" rx="21"/></g>
+    <rect x="140" y="450" width="220" height="42" rx="21" fill="#5E6345"/>
+    <rect x="164" y="467" width="120" height="8" fill="#F1ECE2"/>
+    <g fill="#DDD4C6"><rect x="164" y="407" width="110" height="8"/><rect x="164" y="527" width="140" height="8"/></g>
+  </g>
+  <rect x="438" y="372" width="200" height="56" rx="10" fill="#2F2A25"/>
+  <rect x="424" y="420" width="228" height="360" rx="34" fill="#F1ECE2"/>
+  <rect x="424" y="520" width="228" height="150" fill="#A9532F"/>
+  <text x="446" y="582" font-family="Georgia, serif" font-size="40" fill="#F1ECE2">Daily</text>
+  <text x="448" y="618" font-family="Georgia, serif" font-size="16" fill="#F1ECE2" letter-spacing="2">STACK</text>
+  <g transform="rotate(-28 230 830)"><rect x="170" y="806" width="120" height="48" rx="24" fill="#F1ECE2"/><rect x="230" y="806" width="60" height="48" rx="0" fill="#A9532F"/><rect x="230" y="806" width="60" height="48" rx="24" fill="#A9532F"/></g>
+  <g transform="rotate(18 380 860)"><rect x="330" y="840" width="100" height="40" rx="20" fill="#E9B98E"/></g>
+  <circle cx="690" cy="840" r="26" fill="#F1ECE2"/><circle cx="640" cy="880" r="18" fill="#5E6345"/>
+</svg>

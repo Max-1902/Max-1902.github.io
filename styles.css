@@ -58,6 +58,7 @@ figure { margin: 0; }
 .hero-arch { position: absolute; left: 50%; top: 50%; width: min(30vw, 440px); height: 64vh; transform: translate(-50%, -50%); border-radius: 220px 220px 0 0; overflow: hidden; z-index: 2; will-change: width, height; }
 .hero-arch img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transform: scale(1.18); }
 .hero-intro { position: absolute; left: var(--gutter); bottom: 6vh; max-width: 330px; margin: 0; font-size: 14px; color: var(--stone); z-index: 3; }
+.hero-intro strong { font-weight: 500; color: var(--ink); }
 .hero-cue { position: absolute; right: var(--gutter); bottom: 6vh; font-size: 14px; z-index: 3; display: flex; gap: 10px; align-items: center; }
 .hero-cue span { display: inline-block; animation: bob 2.2s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(5px); } }
@@ -158,6 +159,7 @@ figure { margin: 0; }
 .contact { background: var(--ink); color: var(--bone); padding: 22vh var(--gutter); text-align: center; }
 .contact .kicker { color: #CFC6B9; }
 .contact h2 { font: 400 clamp(72px, 13vw, 220px)/.9 var(--serif); letter-spacing: -.02em; margin-bottom: 44px; }
+.contact-note { font-size: 16px; color: #CFC6B9; margin: -20px 0 36px; }
 .contact-email { font: italic 400 clamp(26px, 3.4vw, 48px)/1.2 var(--serif); border-bottom: 1px solid rgba(241,236,228,.4); padding-bottom: 6px; transition: border-color .3s, color .3s; overflow-wrap: anywhere; }
 .contact-email:hover { color: #E6A983; border-color: #E6A983; }
 .contact-links { display: flex; justify-content: center; gap: 36px; margin-top: 48px; font-size: 14px; color: #CFC6B9; }
