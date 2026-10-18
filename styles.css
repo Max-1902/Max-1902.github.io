@@ -130,6 +130,12 @@ figure { margin: 0; }
 .room:nth-of-type(2) figure { border-radius: 50% 50% 0 0 / 40% 40% 0 0; }
 .room figure img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
 .room:hover figure img { transform: scale(1.04); }
+.room figure.phones { position: relative; overflow: visible; border-radius: 0; }
+.room figure.phones img { position: absolute; width: 36%; height: auto; border-radius: 7% / 3.5%; box-shadow: 0 24px 50px rgba(31,28,24,.28); transform: var(--r); transition: transform .9s var(--ease); }
+.phones img:nth-child(1) { left: 4%; top: 22%; --r: rotate(-7deg); }
+.phones img:nth-child(2) { left: 30%; top: 12%; width: 40%; z-index: 2; --r: none; }
+.phones img:nth-child(3) { right: 4%; top: 22%; --r: rotate(7deg); }
+.room:hover .phones img { transform: var(--r) translateY(-8px); }
 .room-no { font: italic 400 22px/1 var(--serif); color: var(--clay); margin: 0 0 12px; }
 .room h3 { font: 400 clamp(36px, 3.6vw, 56px)/1.02 var(--serif); margin: 0 0 18px; }
 .room-text > p:not([class]) { color: var(--stone); margin: 0 0 24px; max-width: 480px; }
