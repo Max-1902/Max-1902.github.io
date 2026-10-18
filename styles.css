@@ -67,6 +67,11 @@ figure { margin: 0; }
 .hero-overlay h2 { font: 400 clamp(52px, 9vw, 150px)/.95 var(--serif); }
 
 /* ---------- Journey ---------- */
+.about { padding: 18vh var(--gutter) 14vh; }
+.about-inner { max-width: 980px; }
+.about-lead { font: 400 clamp(32px, 4.4vw, 64px)/1.08 var(--serif); letter-spacing: -.01em; margin: 0 0 6vh; }
+.about-body { columns: 2 320px; column-gap: 48px; max-width: 900px; }
+.about-body p { margin: 0 0 18px; font-size: 17px; color: var(--stone); break-inside: avoid; }
 .journey { padding: 0 var(--gutter); }
 .journey-head { padding: 22vh 0 8vh; max-width: 900px; }
 .journey-head h2, .details-head h2 { font: 400 clamp(48px, 7vw, 112px)/.95 var(--serif); letter-spacing: -.01em; }
