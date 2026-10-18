@@ -214,7 +214,8 @@ figure { margin: 0; }
   .detail { padding-bottom: 28px; }
 }
 @media (max-width: 640px) {
-  .nav { position: fixed; inset: 0; z-index: -1; background: var(--bone); flex-direction: column; justify-content: center; align-items: center; gap: 28px; opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); }
+  /* Explicit viewport height: iOS Safari can resolve the fixed nav against the header (because of the blurred ::before), which shrinks inset: 0 to the header's height. */
+  .nav { position: fixed; inset: 0 0 auto; height: 100vh; height: 100dvh; z-index: -1; background: var(--bone); flex-direction: column; justify-content: center; align-items: center; gap: 28px; opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); }
   .nav.open { opacity: 1; pointer-events: auto; }
   .nav a { font: 400 44px/1 var(--serif); }
   .menu-toggle { display: block; }
