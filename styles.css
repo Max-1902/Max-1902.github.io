@@ -145,8 +145,9 @@ figure { margin: 0; }
 .room figure.shots { position: relative; overflow: visible; border-radius: 0; }
 .room figure.shots img { position: absolute; height: auto; border-radius: 8px; box-shadow: 0 20px 44px rgba(31,28,24,.24); transform: var(--r); transition: transform .9s var(--ease); }
 .shots img:nth-child(1) { left: 0; top: 4%; width: 100%; }
-.shots img:nth-child(2) { left: 3%; bottom: 2%; width: 40%; z-index: 2; --r: rotate(-3deg); }
-.shots img:nth-child(3) { right: 3%; bottom: 5%; width: 47%; z-index: 3; --r: rotate(3deg); }
+.shots img:nth-child(2) { left: 0; bottom: 5%; width: 33%; z-index: 2; --r: rotate(-5deg); }
+.shots img:nth-child(3) { right: 0; bottom: 5%; width: 37%; z-index: 2; --r: rotate(5deg); }
+.shots img:nth-child(4) { left: 29%; bottom: 0; width: 42%; z-index: 3; }
 .room:hover .shots img { transform: var(--r) translateY(-8px); }
 .room-no { font: italic 400 22px/1 var(--serif); color: var(--clay); margin: 0 0 12px; }
 .room h3 { font: 400 clamp(36px, 3.6vw, 56px)/1.02 var(--serif); margin: 0 0 18px; }
