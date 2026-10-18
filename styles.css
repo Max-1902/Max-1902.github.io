@@ -136,6 +136,12 @@ figure { margin: 0; }
 .phones img:nth-child(2) { left: 30%; top: 12%; width: 40%; z-index: 2; --r: none; }
 .phones img:nth-child(3) { right: 4%; top: 22%; --r: rotate(7deg); }
 .room:hover .phones img { transform: var(--r) translateY(-8px); }
+.room figure.docs { position: relative; overflow: visible; border-radius: 0; }
+.room figure.docs img { position: absolute; height: auto; border-radius: 4px; box-shadow: 0 20px 44px rgba(31,28,24,.22); transform: var(--r); transition: transform .9s var(--ease); }
+.docs img:nth-child(1) { left: 2%; top: 4%; width: 60%; --r: rotate(-4deg); }
+.docs img:nth-child(2) { right: 2%; top: 12%; width: 60%; --r: rotate(4deg); }
+.docs img:nth-child(3) { left: 6%; bottom: 6%; width: 88%; z-index: 2; border-radius: 10px; }
+.room:hover .docs img { transform: var(--r) translateY(-8px); }
 .room-no { font: italic 400 22px/1 var(--serif); color: var(--clay); margin: 0 0 12px; }
 .room h3 { font: 400 clamp(36px, 3.6vw, 56px)/1.02 var(--serif); margin: 0 0 18px; }
 .room-text > p:not([class]) { color: var(--stone); margin: 0 0 24px; max-width: 480px; }

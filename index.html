@@ -94,7 +94,11 @@
           </div>
 
           <article class="room">
-            <figure><img src="images/rag.svg" alt="Illustration of a 10-K report under a magnifying glass"></figure>
+            <figure class="docs">
+              <img src="images/rag-summary.webp" alt="Report summary: 0.87 answer score with RAG, 0.24 without retrieval, 0.92 retrieval hit@5" loading="lazy">
+              <img src="images/rag-oracle.webp" alt="Report page on the oracle test: perfect retrieval doesn't raise the score" loading="lazy">
+              <img src="images/rag-terminal.webp" alt="Terminal output of the oracle test run, oracle vs. RAG score per question" loading="lazy">
+            </figure>
             <div class="room-text">
               <p class="room-no">No. 01</p>
               <h3>Local RAG &amp; Evaluation Pipeline</h3>
