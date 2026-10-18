@@ -42,12 +42,12 @@
   <nav class="hops" aria-label="Where you are on the journey">
     <svg class="hop-arcs" aria-hidden="true"></svg>
     <ol>
-      <li><a href="#ch-0"><span>Germany</span></a></li>
-      <li><a href="#ch-1"><span>Wichita</span></a></li>
-      <li><a href="#ch-2"><span>New Orleans</span></a></li>
-      <li><a href="#ch-3"><span>Berlin</span></a></li>
-      <li><a href="#ch-4"><span>Frankfurt</span></a></li>
-      <li><a href="#ch-5"><span>Chicago</span></a></li>
+      <li><a href="#ch-0"><span>Chicago</span></a></li>
+      <li><a href="#ch-1"><span>Frankfurt</span></a></li>
+      <li><a href="#ch-2"><span>Berlin</span></a></li>
+      <li><a href="#ch-3"><span>New Orleans</span></a></li>
+      <li><a href="#ch-4"><span>Wichita</span></a></li>
+      <li><a href="#ch-5"><span>Germany</span></a></li>
     </ol>
     <span class="hop-marker" aria-hidden="true"></span>
   </nav>
@@ -62,7 +62,7 @@
           <span class="hero-line hero-line-2 hero-fade"><em>Wojciechowski</em></span>
         </h1>
         <figure class="hero-arch"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
-        <p class="hero-intro hero-fade">MS Computer Science at DePaul (GPA 3.8) with a BS in Finance. I build AI tools for finance and test whether they actually hold up. Former NCAA D1 golfer. <strong>Seeking Summer 2027 internships.</strong></p>
+        <p class="hero-intro hero-fade"><span class="hero-strip">DekaBank · DePaul GPA 3.8 · NCAA D1 golfer</span>MS Computer Science at DePaul with a BS in Finance. I build AI tools for finance and test whether they actually hold up. <strong>Seeking Summer 2027 internships.</strong></p>
         <a class="hero-cue hero-fade" href="#work" data-label="Projects">See the work <span>↓</span></a>
         <div class="hero-overlay">
         </div>
@@ -142,60 +142,52 @@
       <div class="journey-head reveal">
         <p class="kicker">The route</p>
         <h2>Six chapters, <em>one path.</em></h2>
-        <p class="lede">Golf, finance, banking, and now computer science.</p>
+        <p class="lede">Newest first: computer science, banking, finance, golf.</p>
       </div>
 
       <div class="journey-body">
         <div class="journey-visual" aria-hidden="true">
           <div class="plates">
-            <figure class="plate"><img src="images/germany.svg" alt=""></figure>
-            <figure class="plate"><img src="images/wichita.svg" alt=""></figure>
-            <figure class="plate"><img src="images/neworleans.svg" alt=""></figure>
-            <figure class="plate"><img src="images/berlin.svg" alt=""></figure>
-            <figure class="plate"><img src="images/frankfurt.svg" alt=""></figure>
             <figure class="plate"><img src="images/hero.svg" alt=""></figure>
+            <figure class="plate"><img src="images/frankfurt.svg" alt=""></figure>
+            <figure class="plate"><img src="images/berlin.svg" alt=""></figure>
+            <figure class="plate"><img src="images/neworleans.svg" alt=""></figure>
+            <figure class="plate"><img src="images/wichita.svg" alt=""></figure>
+            <figure class="plate"><img src="images/germany.svg" alt=""></figure>
           </div>
         </div>
 
         <ol class="chapters">
           <li class="chapter" id="ch-0" data-index="0">
-            <figure class="chapter-img"><img src="images/germany.svg" alt="Illustration of a golf green with a flag in rolling hills"></figure>
-            <p class="chapter-no">Chapter I</p>
-            <p class="when">2018 — 2020</p>
-            <h3>Germany</h3>
-            <p class="role">German National Golf Team</p>
-            <p>Competed for the German National Golf Team from 2018 to 2020. Native German speaker, fluent in English and Polish.</p>
-            <a class="link chapter-press" href="https://www.berliner-zeitung.de/sport-leidenschaft/maximilian-wojciechowski-kann-sich-auf-das-siebener-eiser-verlassen-li.99876" target="_blank" rel="noreferrer">In the press: Berliner Zeitung <span>↗</span></a>
+            <figure class="chapter-img"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
+            <p class="chapter-no">Chapter VI <span class="here">I am here</span></p>
+            <p class="when">Expected March 2028</p>
+            <h3>Chicago</h3>
+            <p class="role">MS Computer Science · DePaul University</p>
+            <ul>
+              <li>GPA 3.8 / 4.0</li>
+              <li>Research interests: trading, machine learning for financial markets, AI engineering</li>
+              <li>Data Structures I–II, Computer Systems I–II, Discrete Mathematics, Python Programming</li>
+              <li>DePaul Computer Science Society</li>
+            </ul>
           </li>
 
           <li class="chapter" id="ch-1" data-index="1">
-            <figure class="chapter-img"><img src="images/wichita.svg" alt="Illustration of Kansas wheat fields and grain silos at sunset"></figure>
-            <p class="chapter-no">Chapter II</p>
-            <p class="when">Aug 2020 — May 2022</p>
-            <h3>Wichita, Kansas</h3>
-            <p class="role">BA International Business · Wichita State University</p>
+            <figure class="chapter-img"><img src="images/frankfurt.svg" alt="Illustration of the Frankfurt skyline at night"></figure>
+            <p class="chapter-no">Chapter V</p>
+            <p class="when">Jun — Sep 2026</p>
+            <h3>Frankfurt</h3>
+            <p class="role">Intern, Structuring &amp; Derivatives Trading · DekaBank</p>
             <ul>
-              <li>Athletic and academic scholarship</li>
-              <li>NCAA All-Academic Team, 2021–22</li>
+              <li>Developed a regex-based Python algorithm that processes thousands of dpa news articles and maps them to issuers and client portfolios, enabling scalable classification by issuer, category and country; currently being migrated into production</li>
+              <li>Developed a rule-based Java engine for the automated classification of counterparties under the EU Capital Requirements Regulation (CRR), with a test suite validating edge cases and rule priorities</li>
+              <li>Code-reviewed and performance-tested an LLM-based term-sheet comparison tool, assessing the quality and accuracy of its results; validated and documented test results in Excel (Python)</li>
+              <li>Developed an interactive world map prototype for the internal trading dashboard using Claude (TypeScript), combining internal financial data with external economic indicators; presented it to senior engineers as a demonstration of AI-assisted development in a regulated banking environment</li>
+              <li>Prepared internal wiki documentation on AI-assisted and agent-based coding workflows, using the world map as the case study</li>
             </ul>
-            <a class="link chapter-press" href="https://goshockers.com/sports/mens-golf/roster/max-wojciechowski/5974" target="_blank" rel="noreferrer">Golf roster: Wichita State <span>↗</span></a>
           </li>
 
           <li class="chapter" id="ch-2" data-index="2">
-            <figure class="chapter-img"><img src="images/neworleans.svg" alt="Illustration of a crescent moon seen through arched balconies over the river"></figure>
-            <p class="chapter-no">Chapter III</p>
-            <p class="when">Graduated May 2025</p>
-            <h3>New Orleans</h3>
-            <p class="role">BS Finance, Data Analytics Concentration · University of New Orleans</p>
-            <ul>
-              <li>Athletic and academic scholarship</li>
-              <li>Privateer Blue Honors — Fall 2022, Spring 2023, Spring 2024</li>
-              <li>Investments, Financial Modeling, Quantitative Methods, Data Analytics, Accounting</li>
-            </ul>
-            <a class="link chapter-press" href="https://privateersports.com/sports/mens-golf/roster/maximilian-wojciechowski/6132" target="_blank" rel="noreferrer">Golf roster: UNO Privateers <span>↗</span></a>
-          </li>
-
-          <li class="chapter" id="ch-3" data-index="3">
             <figure class="chapter-img"><img src="images/berlin.svg" alt="Illustration of the Berlin TV tower"></figure>
             <p class="chapter-no">Chapter IV</p>
             <p class="when">Summers 2024 &amp; 2025</p>
@@ -216,33 +208,41 @@
             </div>
           </li>
 
-          <li class="chapter" id="ch-4" data-index="4">
-            <figure class="chapter-img"><img src="images/frankfurt.svg" alt="Illustration of the Frankfurt skyline at night"></figure>
-            <p class="chapter-no">Chapter V</p>
-            <p class="when">Jun — Sep 2026</p>
-            <h3>Frankfurt</h3>
-            <p class="role">Intern, Structuring &amp; Derivatives Trading · DekaBank</p>
+          <li class="chapter" id="ch-3" data-index="3">
+            <figure class="chapter-img"><img src="images/neworleans.svg" alt="Illustration of a crescent moon seen through arched balconies over the river"></figure>
+            <p class="chapter-no">Chapter III</p>
+            <p class="when">Graduated May 2025</p>
+            <h3>New Orleans</h3>
+            <p class="role">BS Finance, Data Analytics Concentration · University of New Orleans</p>
             <ul>
-              <li>Developed a regex-based Python algorithm that processes thousands of dpa news articles and maps them to issuers and client portfolios, enabling scalable classification by issuer, category and country; currently being migrated into production</li>
-              <li>Developed a rule-based Java engine for the automated classification of counterparties under the EU Capital Requirements Regulation (CRR), with a test suite validating edge cases and rule priorities</li>
-              <li>Code-reviewed and performance-tested an LLM-based term-sheet comparison tool, assessing the quality and accuracy of its results; validated and documented test results in Excel (Python)</li>
-              <li>Developed an interactive world map prototype for the internal trading dashboard using Claude (TypeScript), combining internal financial data with external economic indicators; presented it to senior engineers as a demonstration of AI-assisted development in a regulated banking environment</li>
-              <li>Prepared internal wiki documentation on AI-assisted and agent-based coding workflows, using the world map as the case study</li>
+              <li>Athletic and academic scholarship</li>
+              <li>Privateer Blue Honors — Fall 2022, Spring 2023, Spring 2024</li>
+              <li>Investments, Financial Modeling, Quantitative Methods, Data Analytics, Accounting</li>
             </ul>
+            <a class="link chapter-press" href="https://privateersports.com/sports/mens-golf/roster/maximilian-wojciechowski/6132" target="_blank" rel="noreferrer">Golf roster: UNO Privateers <span>↗</span></a>
+          </li>
+
+          <li class="chapter" id="ch-4" data-index="4">
+            <figure class="chapter-img"><img src="images/wichita.svg" alt="Illustration of Kansas wheat fields and grain silos at sunset"></figure>
+            <p class="chapter-no">Chapter II</p>
+            <p class="when">Aug 2020 — May 2022</p>
+            <h3>Wichita, Kansas</h3>
+            <p class="role">BA International Business · Wichita State University</p>
+            <ul>
+              <li>Athletic and academic scholarship</li>
+              <li>NCAA All-Academic Team, 2021–22</li>
+            </ul>
+            <a class="link chapter-press" href="https://goshockers.com/sports/mens-golf/roster/max-wojciechowski/5974" target="_blank" rel="noreferrer">Golf roster: Wichita State <span>↗</span></a>
           </li>
 
           <li class="chapter" id="ch-5" data-index="5">
-            <figure class="chapter-img"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
-            <p class="chapter-no">Chapter VI <span class="here">I am here</span></p>
-            <p class="when">Expected March 2028</p>
-            <h3>Chicago</h3>
-            <p class="role">MS Computer Science · DePaul University</p>
-            <ul>
-              <li>GPA 3.8 / 4.0</li>
-              <li>Research interests: trading, machine learning for financial markets, AI engineering</li>
-              <li>Data Structures I–II, Computer Systems I–II, Discrete Mathematics, Python Programming</li>
-              <li>DePaul Computer Science Society</li>
-            </ul>
+            <figure class="chapter-img"><img src="images/germany.svg" alt="Illustration of a golf green with a flag in rolling hills"></figure>
+            <p class="chapter-no">Chapter I</p>
+            <p class="when">2018 — 2020</p>
+            <h3>Germany</h3>
+            <p class="role">German National Golf Team</p>
+            <p>Competed for the German National Golf Team from 2018 to 2020. Native German speaker, fluent in English and Polish.</p>
+            <a class="link chapter-press" href="https://www.berliner-zeitung.de/sport-leidenschaft/maximilian-wojciechowski-kann-sich-auf-das-siebener-eiser-verlassen-li.99876" target="_blank" rel="noreferrer">In the press: Berliner Zeitung <span>↗</span></a>
           </li>
         </ol>
       </div>
@@ -255,7 +255,7 @@
       </div>
       <div class="details-grid">
         <div class="detail reveal"><h3>Languages</h3><p>German (native)<br>English (C2)<br>Polish (C2)</p></div>
-        <div class="detail reveal"><h3>Programming</h3><p>Python, Java, TypeScript, C, Git, Claude Code<br>RAG (Chroma, BM25, MLX)</p></div>
+        <div class="detail reveal"><h3>Programming</h3><p>Python, Java, TypeScript, C<br>RAG (Chroma, BM25, MLX)<br>Tools: Git, Claude Code</p></div>
         <div class="detail reveal"><h3>Business</h3><p>Excel (financial modeling)<br>PowerPoint<br>Bloomberg Terminal</p></div>
         <div class="detail reveal"><h3>Beyond the desk</h3><p>NCAA D1 Golf (5 years)<br>German National Golf Team (2018–2020)<br>Golf, geopolitics, cosmology, trading</p></div>
       </div>

@@ -59,6 +59,7 @@ figure { margin: 0; }
 .hero-arch img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transform: scale(1.18); }
 .hero-intro { position: absolute; left: var(--gutter); bottom: 6vh; max-width: 330px; margin: 0; font-size: 14px; color: var(--stone); z-index: 3; }
 .hero-intro strong { font-weight: 500; color: var(--ink); }
+.hero-strip { display: block; margin-bottom: 10px; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--clay); }
 .hero-cue { position: absolute; right: var(--gutter); bottom: 6vh; font-size: 14px; z-index: 3; display: flex; gap: 10px; align-items: center; }
 .hero-cue span { display: inline-block; animation: bob 2.2s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(5px); } }
@@ -82,7 +83,7 @@ figure { margin: 0; }
 .plate { position: absolute; inset: 0; clip-path: inset(100% 0 0 0); transition: clip-path 1.1s var(--ease); }
 .plate.is-shown { clip-path: inset(0 0 0 0); }
 .plate img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); transition: transform 1.8s var(--ease); }
-.plate:last-child img { object-position: 62% center; }
+.plate:first-child img { object-position: 62% center; }
 .plate.is-current img { transform: scale(1); }
 
 
