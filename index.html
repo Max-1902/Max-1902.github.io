@@ -85,10 +85,10 @@
             <div class="room-text">
               <p class="room-no">No. 01</p>
               <h3>Local RAG &amp; Evaluation Pipeline</h3>
-              <p>A fully local RAG pipeline over FY2025–26 10-K filings of Microsoft, NVIDIA, Tesla, Lockheed Martin and BlackRock, with hybrid dense + BM25 retrieval and no external API calls. The key test: an oracle that hands the model only the chunks containing the answer scored the same as normal retrieval, so the lost points come from generation, not retrieval. Retrieval hit@5 was 0.92 (95% CI 0.86–0.98).</p>
+              <p>A fully local RAG pipeline over FY2025–26 10-K filings of 5 companies (Microsoft, NVIDIA, Tesla, Lockheed Martin, BlackRock), using hybrid dense + BM25 retrieval with no external API calls. Oracle tests showed generation, not retrieval, was the bottleneck.</p>
               <dl class="stats">
-                <div><dt>−0.003</dt><dd>Oracle minus RAG answer score (95% CI ±0.10): retrieval isn't the bottleneck</dd></div>
-                <div><dt>0.87</dt><dd>Answer score on 65 hand-verified questions (95% CI 0.79–0.94)</dd></div>
+                <div><dt>0.87</dt><dd>Answer score on 65 hand-verified questions, vs. 0.24 without retrieval (95% bootstrap CIs)</dd></div>
+                <div><dt>0.92</dt><dd>Retrieval hit@5</dd></div>
               </dl>
               <p class="tags">Python · MLX · Llama 3.1 8B · Chroma</p>
               <a class="link" href="https://github.com/Max-1902/local-rag-10k-eval" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
@@ -100,12 +100,12 @@
             <div class="room-text">
               <p class="room-no">No. 02</p>
               <h3>Macroeconomic Forecasting System</h3>
-              <p>A monitoring and analysis system for macroeconomic, political and industrial data (trade, sanctions, debt, conflict, hazards) on a 3D globe. It compares any two of 50 country indicators with tested statistics, and an LLM analyst answers from the computed numbers. The forecasts are one tested part: backtested against a naive forecast and the IMF, they mostly don't beat either, and the panel says so.</p>
+              <p>A macro dashboard on 50+ World Bank/OWID series per country with in-browser AR(2) GDP forecasts (1,000+ tests). Backtested against a naive baseline across 24 countries: AR cut error 21–25% for Poland, Turkey and Indonesia but lost for China, Japan and Korea, where the full-sample fit pulls forecasts toward boom-era growth.</p>
               <dl class="stats">
-                <div><dt>30</dt><dd>Map overlays across 5 categories, from live tracking to infrastructure</dd></div>
-                <div><dt>50</dt><dd>Country indicators (World Bank, OWID, Ember) with Spearman analytics</dd></div>
+                <div><dt>21–25%</dt><dd>Lower forecast error than naive for Poland, Turkey and Indonesia</dd></div>
+                <div><dt>44/52</dt><dd>Countries where IMF forecasts beat the AR model, 1990–2025 (GDP error 1.89 vs. 2.26 pp)</dd></div>
               </dl>
-              <p class="tags">TypeScript · React · Mapbox GL · World Bank API</p>
+              <p class="tags">TypeScript · World Bank API</p>
               <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
             </div>
           </article>
