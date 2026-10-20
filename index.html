@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <div class="intro-curtain" aria-hidden="true"><span>Maximilian Wojciechowski</span></div>
@@ -113,10 +113,46 @@
           </article>
 
           <article class="room">
-            <figure class="shots" data-gallery="macro-gallery" title="See all screenshots">
-              <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators" loading="lazy">
-              <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline with a 95% interval and backtest errors" loading="lazy">
-              <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer comparing US and European equity ETFs, with a table and bar chart" loading="lazy">
+            <figure class="deck" aria-roledescription="carousel" aria-label="Screenshots of the dashboard">
+              <div class="deck-stage">
+                <div class="deck-slide">
+                  <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators">
+                  <p class="deck-cap">The Forecasts &amp; Analysis workspace: live map next to what moves together across 12 indicators.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline for the next three years, with a 95% interval and backtest errors">
+                  <p class="deck-cap">GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo;, with backtest errors, a significance test and an interval checked against past outcomes.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer: US equity ETFs rose while European ETFs fell 1% to 1.9%, with a table and bar chart">
+                  <p class="deck-cap is-question"><span>Question asked to the AI analyst</span>&ldquo;How are US and European equity ETFs moving today, and what does the backtested forecast say about Germany&rsquo;s real GDP growth for the next three years? Show the chart and tell me how far I should trust it.&rdquo;</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-analyst-gdp.webp" alt="AI analyst answer, continued: Germany GDP forecast table and chart with 95% intervals, and how the model works">
+                  <p class="deck-cap">The same answer, continued: the Germany forecast, its chart, and how far to trust it. Every claim is tagged as dashboard data, background or inference.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-gas.webp" alt="Natural-gas storage forecast for next week, backtested on 561 weeks against the five-year seasonal norm">
+                  <p class="deck-cap">Weekly natural-gas storage forecast, backtested on 561 weeks: average miss 29.3 Bcf vs. 30.9 Bcf for the seasonal norm.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-energy.webp" alt="EIA crude oil and gasoline inventories against their five-year average and range">
+                  <p class="deck-cap">EIA crude and gasoline inventories against the five-year average and range for the same week.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-markets.webp" alt="Markets screen with ETF quotes, Germany's economy and trade partners, global energy trends, resource rents and oil inventories">
+                  <p class="deck-cap">The Markets screen: quotes, country economy and trade profiles, global trends and resources side by side.</p>
+                </div>
+                <div class="deck-slide">
+                  <img src="images/macro-vscode.webp" alt="VS Code with a C++ project open and Claude Code in the side panel">
+                  <p class="deck-cap">My setup: VS Code with Claude Code in the side panel.</p>
+                </div>
+              </div>
+              <div class="deck-nav">
+                <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
+                <span class="deck-count">1 / 8</span>
+                <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
+              </div>
             </figure>
             <div class="room-text">
               <p class="room-no">No. 02</p>
@@ -127,7 +163,6 @@
                 <div><dt>44/52</dt><dd>Countries where IMF forecasts beat the AR model, 1990–2025 (GDP error 1.89 vs. 2.26 pp)</dd></div>
               </dl>
               <p class="tags">TypeScript · World Bank API</p>
-              <button class="link gallery-open" type="button" data-gallery="macro-gallery">See all 8 screenshots <span>→</span></button>
               <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
             </div>
           </article>
@@ -301,45 +336,6 @@
     <span>© <span id="year"></span> Maximilian Wojciechowski</span>
     <a href="#top" data-label="Welcome">Back to the start ↑</a>
   </footer>
-  <!-- Full-size, uncropped screenshots for the macro project -->
-  <dialog class="gallery" id="macro-gallery" aria-label="Macroeconomic Forecasting System screenshots">
-    <button class="gallery-close" type="button" aria-label="Close">×</button>
-    <div class="gallery-body">
-      <p class="kicker">Macroeconomic Forecasting System</p>
-      <figure>
-        <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators" loading="lazy">
-        <figcaption>The Forecasts &amp; Analysis workspace: live map next to what moves together across 12 indicators.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline for the next three years, with a 95% interval and backtest errors" loading="lazy">
-        <figcaption>GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo;, with backtest errors, a significance test and an interval checked against past outcomes.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer: US equity ETFs rose while European ETFs fell 1% to 1.9%, with a table and bar chart" loading="lazy">
-        <figcaption class="question"><span>Question asked to the AI analyst</span>&ldquo;How are US and European equity ETFs moving today, and what does the backtested forecast say about Germany&rsquo;s real GDP growth for the next three years? Show the chart and tell me how far I should trust it.&rdquo;</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-analyst-gdp.webp" alt="AI analyst answer, continued: Germany GDP forecast table and chart with 95% intervals, and how the model works" loading="lazy">
-        <figcaption>The same answer, continued: the Germany forecast, its chart, and how far to trust it. Every claim is tagged as dashboard data, background or inference.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-gas.webp" alt="Natural-gas storage forecast for next week, backtested on 561 weeks against the five-year seasonal norm" loading="lazy">
-        <figcaption>Weekly natural-gas storage forecast, backtested on 561 weeks: average miss 29.3 Bcf vs. 30.9 Bcf for the seasonal norm.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-energy.webp" alt="EIA crude oil and gasoline inventories against their five-year average and range" loading="lazy">
-        <figcaption>EIA crude and gasoline inventories against the five-year average and range for the same week.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-markets.webp" alt="Markets screen with ETF quotes, Germany's economy and trade partners, global energy trends, resource rents and oil inventories" loading="lazy">
-        <figcaption>The Markets screen: quotes, country economy and trade profiles, global trends and resources side by side.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/macro-vscode.webp" alt="VS Code with a C++ project open and Claude Code in the side panel" loading="lazy">
-        <figcaption>My setup: VS Code with Claude Code in the side panel.</figcaption>
-      </figure>
-    </div>
-  </dialog>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

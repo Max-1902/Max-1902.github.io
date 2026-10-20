@@ -146,29 +146,22 @@ figure { margin: 0; }
 .docs img:nth-child(2) { right: 2%; top: 12%; width: 60%; --r: rotate(4deg); }
 .docs img:nth-child(3) { left: 6%; bottom: 6%; width: 88%; z-index: 2; border-radius: 10px; }
 .room:hover .docs img { transform: var(--r) translateY(-8px); }
-.room figure.shots { position: relative; overflow: visible; border-radius: 0; }
-.room figure.shots img { position: absolute; height: auto; border-radius: 8px; box-shadow: 0 20px 44px rgba(31,28,24,.24); transform: var(--r); transition: transform .9s var(--ease); }
-/* Three wide screenshots cascading down; the AI analyst sits in front, fully visible */
-.shots img:nth-child(1) { left: 0; top: 2%; width: 90%; --r: rotate(-3deg); }
-.shots img:nth-child(2) { right: 0; top: 30%; width: 90%; z-index: 2; --r: rotate(3deg); }
-.shots img:nth-child(3) { left: 4%; bottom: 0; width: 92%; z-index: 3; }
-.room:hover .shots img { transform: var(--r) translateY(-8px); }
-.shots[data-gallery] { cursor: zoom-in; }
-button.link { background: none; border: 0; border-bottom: 1px solid var(--ink); border-radius: 0; font: inherit; font-size: 14px; color: inherit; padding: 0 0 3px; margin-right: 24px; cursor: pointer; }
-
-/* ---------- Screenshot gallery (full size, uncropped) ---------- */
-.gallery { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; background: var(--ink); color: var(--bone); overflow-y: auto; overscroll-behavior: contain; }
-.gallery::backdrop { background: rgba(31,28,24,.6); }
-.gallery-open-page { overflow: hidden; }
-.gallery-body { max-width: 1200px; margin: 0 auto; padding: 80px var(--gutter) 120px; }
-.gallery .kicker { color: #CFC6B9; }
-.gallery figure { margin: 0 0 64px; }
-.gallery img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 20px 44px rgba(0,0,0,.35); }
-.gallery figcaption { margin-top: 16px; font-size: 14px; color: #CFC6B9; max-width: 760px; }
-.gallery figcaption.question { font: italic 400 clamp(20px, 2.2vw, 28px)/1.3 var(--serif); color: var(--bone); border-left: 2px solid #E6A983; padding-left: 18px; }
-.gallery figcaption.question span { display: block; font: 400 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #E6A983; margin-bottom: 10px; }
-.gallery-close { position: fixed; top: 18px; right: var(--gutter); z-index: 1; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(241,236,228,.3); background: var(--ink); color: var(--bone); font: 400 26px/1 var(--sans); cursor: pointer; }
-.gallery-close:hover { border-color: #E6A983; color: #E6A983; }
+/* Screenshot deck: the front card is fully visible with its caption, the next two peek out behind it */
+.room figure.deck { aspect-ratio: auto; height: auto; overflow: visible; border-radius: 0; padding-top: 28px; }
+.deck-stage { position: relative; aspect-ratio: 16 / 10; cursor: pointer; }
+.deck-slide { position: absolute; inset: 0; display: flex; align-items: flex-end; opacity: 0; pointer-events: none; transform: translate(-3%, -9%) rotate(-3deg) scale(.88); transition: transform .9s var(--ease), opacity .6s var(--ease); }
+.room figure.deck .deck-slide img { width: 100%; height: auto; object-fit: initial; border-radius: 8px; box-shadow: 0 20px 44px rgba(31,28,24,.24); transition: none; transform: none; }
+.deck-slide.is-front { opacity: 1; z-index: 3; transform: none; pointer-events: auto; }
+.deck-slide.is-next { opacity: 1; z-index: 2; transform: translate(3%, -5%) rotate(2.5deg) scale(.94); }
+.deck-slide.is-after { opacity: 1; z-index: 1; }
+.room:hover .deck-slide.is-front { transform: translateY(-6px); }
+.deck-cap { position: absolute; top: calc(100% + 18px); left: 0; right: 0; margin: 0; font-size: 14px; color: var(--stone); opacity: 0; transition: opacity .5s; }
+.is-front .deck-cap { opacity: 1; transition-delay: .3s; }
+.deck-cap.is-question { font: italic 400 19px/1.3 var(--serif); color: var(--ink); border-left: 2px solid var(--clay); padding-left: 14px; }
+.deck-cap.is-question span { display: block; font: 400 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--clay); margin-bottom: 8px; }
+.deck-nav { display: flex; align-items: center; gap: 14px; margin-top: 150px; font: italic 400 20px/1 var(--serif); color: var(--stone); }
+.deck-nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--ink); font: 400 16px/1 var(--sans); cursor: pointer; transition: border-color .3s, color .3s; }
+.deck-nav button:hover { border-color: var(--clay); color: var(--clay); }
 .room-no { font: italic 400 22px/1 var(--serif); color: var(--clay); margin: 0 0 12px; }
 .room h3 { font: 400 clamp(36px, 3.6vw, 56px)/1.02 var(--serif); margin: 0 0 18px; }
 .room-text > p:not([class]) { color: var(--stone); margin: 0 0 24px; max-width: 480px; }
@@ -255,8 +248,8 @@ button.link { background: none; border: 0; border-bottom: 1px solid var(--ink); 
   .phones img:nth-child(3) { right: 2%; --r: rotate(3deg); }
   .docs img:nth-child(1) { left: 3%; --r: rotate(-2deg); }
   .docs img:nth-child(2) { right: 3%; --r: rotate(2deg); }
-  .shots img:nth-child(1) { left: 2%; --r: rotate(-2deg); }
-  .shots img:nth-child(2) { right: 2%; --r: rotate(2deg); }
+  .deck-cap.is-question { font-size: 17px; }
+  .deck-nav { margin-top: 180px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

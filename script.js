@@ -189,18 +189,37 @@ function updateWork() {
   progress.style.transform = `scaleX(${p})`;
 }
 
-// Screenshot gallery: open from the collage or the button, close with ×, Esc or a click outside an image.
-$$('[data-gallery]').forEach(el => el.addEventListener('click', () => {
-  const dialog = $(`#${el.dataset.gallery}`);
-  dialog.showModal();
-  dialog.scrollTop = 0;
-  document.documentElement.classList.add('gallery-open-page');
-}));
-$$('.gallery').forEach(dialog => {
-  dialog.addEventListener('close', () => document.documentElement.classList.remove('gallery-open-page'));
-  dialog.addEventListener('click', e => {
-    if (e.target.closest('.gallery-close') || !e.target.closest('figure, .kicker')) dialog.close();
+// Screenshot deck: click, arrows or swipe to flip; it also turns by itself while on screen until someone takes over.
+$$('.deck').forEach(deck => {
+  const slides = $$('.deck-slide', deck);
+  const count = $('.deck-count', deck);
+  let front = 0, timer = 0, visible = false, touched = false, hovered = false, startX = null;
+  const show = i => {
+    front = (i + slides.length) % slides.length;
+    slides.forEach((sl, j) => {
+      const pos = (j - front + slides.length) % slides.length;
+      sl.className = 'deck-slide' + (pos === 0 ? ' is-front' : pos === 1 ? ' is-next' : pos === 2 ? ' is-after' : '');
+    });
+    count.textContent = `${front + 1} / ${slides.length}`;
+  };
+  const autoplay = () => {
+    clearInterval(timer);
+    if (visible && !touched && !hovered && !reduced) timer = setInterval(() => show(front + 1), 6000);
+  };
+  const flip = step => { touched = true; clearInterval(timer); show(front + step); };
+  $('.deck-prev', deck).addEventListener('click', () => flip(-1));
+  $('.deck-next', deck).addEventListener('click', () => flip(1));
+  $('.deck-stage', deck).addEventListener('click', () => flip(1));
+  deck.addEventListener('pointerenter', () => { hovered = true; autoplay(); });
+  deck.addEventListener('pointerleave', () => { hovered = false; autoplay(); });
+  deck.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  deck.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (startX !== null && Math.abs(dx) > 40) flip(dx < 0 ? 1 : -1);
+    startX = null;
   });
+  new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; autoplay(); }, { threshold: .5 }).observe(deck);
+  show(0);
 });
 
 let ticking = false;
