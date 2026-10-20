@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <div class="intro-curtain" aria-hidden="true"><span>Maximilian Wojciechowski</span></div>
@@ -112,57 +112,65 @@
             </div>
           </article>
 
-          <article class="room">
-            <figure class="deck" aria-roledescription="carousel" aria-label="Screenshots of the dashboard">
-              <div class="deck-stage">
-                <div class="deck-slide">
-                  <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators">
-                  <p class="deck-cap">The Forecasts &amp; Analysis workspace: live map next to what moves together across 12 indicators.</p>
+          <article class="room room-wide">
+            <figure class="decks">
+              <div class="deck" aria-roledescription="carousel" aria-label="Dashboard screenshots">
+                <div class="deck-stage">
+                  <div class="deck-slide">
+                    <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators">
+                    <p class="deck-cap">The Forecasts &amp; Analysis workspace: live map next to what moves together across 12 indicators.</p>
+                  </div>
+                  <div class="deck-slide">
+                    <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline for the next three years, with a 95% interval and backtest errors">
+                    <p class="deck-cap">GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo;, with backtest errors, a significance test and an interval checked against past outcomes.</p>
+                  </div>
+                  <div class="deck-slide">
+                    <img src="images/macro-gas.webp" alt="Natural-gas storage forecast for next week, backtested on 561 weeks against the five-year seasonal norm">
+                    <p class="deck-cap">Weekly natural-gas storage forecast, backtested on 561 weeks: average miss 29.3 Bcf vs. 30.9 Bcf for the seasonal norm.</p>
+                  </div>
+                  <div class="deck-slide">
+                    <img src="images/macro-energy.webp" alt="EIA crude oil and gasoline inventories against their five-year average and range">
+                    <p class="deck-cap">EIA crude and gasoline inventories against the five-year average and range for the same week.</p>
+                  </div>
                 </div>
-                <div class="deck-slide">
-                  <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline for the next three years, with a 95% interval and backtest errors">
-                  <p class="deck-cap">GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo;, with backtest errors, a significance test and an interval checked against past outcomes.</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer: US equity ETFs rose while European ETFs fell 1% to 1.9%, with a table and bar chart">
-                  <p class="deck-cap is-question"><span>Question asked to the AI analyst</span>&ldquo;How are US and European equity ETFs moving today, and what does the backtested forecast say about Germany&rsquo;s real GDP growth for the next three years? Show the chart and tell me how far I should trust it.&rdquo;</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-analyst-gdp.webp" alt="AI analyst answer, continued: Germany GDP forecast table and chart with 95% intervals, and how the model works">
-                  <p class="deck-cap">The same answer, continued: the Germany forecast, its chart, and how far to trust it. Every claim is tagged as dashboard data, background or inference.</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-gas.webp" alt="Natural-gas storage forecast for next week, backtested on 561 weeks against the five-year seasonal norm">
-                  <p class="deck-cap">Weekly natural-gas storage forecast, backtested on 561 weeks: average miss 29.3 Bcf vs. 30.9 Bcf for the seasonal norm.</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-energy.webp" alt="EIA crude oil and gasoline inventories against their five-year average and range">
-                  <p class="deck-cap">EIA crude and gasoline inventories against the five-year average and range for the same week.</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-markets.webp" alt="Markets screen with ETF quotes, Germany's economy and trade partners, global energy trends, resource rents and oil inventories">
-                  <p class="deck-cap">The Markets screen: quotes, country economy and trade profiles, global trends and resources side by side.</p>
-                </div>
-                <div class="deck-slide">
-                  <img src="images/macro-vscode.webp" alt="VS Code with a C++ project open and Claude Code in the side panel">
-                  <p class="deck-cap">My setup: VS Code with Claude Code in the side panel.</p>
+                <div class="deck-nav">
+                  <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
+                  <span class="deck-count">1 / 4</span>
+                  <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
                 </div>
               </div>
-              <div class="deck-nav">
-                <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
-                <span class="deck-count">1 / 8</span>
-                <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
+              <div class="deck" aria-roledescription="carousel" aria-label="AI analyst and workspace screenshots">
+                <div class="deck-stage">
+                  <div class="deck-slide">
+                    <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer: US equity ETFs rose while European ETFs fell 1% to 1.9%, with a table and bar chart">
+                    <p class="deck-cap is-question"><span>Question asked to the AI analyst</span>&ldquo;How are US and European equity ETFs moving today, and what does the backtested forecast say about Germany&rsquo;s real GDP growth for the next three years? Show the chart and tell me how far I should trust it.&rdquo;</p>
+                  </div>
+                  <div class="deck-slide">
+                    <img src="images/macro-analyst-gdp.webp" alt="AI analyst answer, continued: Germany GDP forecast table and chart with 95% intervals, and how the model works">
+                    <p class="deck-cap">The same answer, continued: the Germany forecast, its chart, and how far to trust it. Every claim is tagged as dashboard data, background or inference.</p>
+                  </div>
+                  <div class="deck-slide">
+                    <img src="images/macro-markets.webp" alt="Markets screen with ETF quotes, Germany's economy and trade partners, global energy trends, resource rents and oil inventories">
+                    <p class="deck-cap">The Markets screen: quotes, country economy and trade profiles, global trends and resources side by side.</p>
+                  </div>
+                </div>
+                <div class="deck-nav">
+                  <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
+                  <span class="deck-count">1 / 3</span>
+                  <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
+                </div>
               </div>
+              <p class="deck-hint">Click a screenshot or use the arrows to flip through all 7.</p>
             </figure>
             <div class="room-text">
               <p class="room-no">No. 02</p>
-              <h3>Macroeconomic Forecasting System</h3>
-              <p>A macro dashboard on 50+ World Bank/OWID series per country with in-browser AR(2) GDP forecasts (1,000+ tests). Backtested against a naive baseline across 24 countries: AR cut error 21–25% for Poland, Turkey and Indonesia but lost for China, Japan and Korea, where the full-sample fit pulls forecasts toward boom-era growth.</p>
+              <h3>World of Data</h3>
+              <p>A live economic and geopolitical dashboard with forecasts computed in the browser and an AI analyst that answers by calling 25 live-data tools (World Bank, EIA, ACLED, market quotes), so it explains measured numbers instead of inventing them. Each model was chosen by a rolling-origin backtest across 217 economies (1990–2025) with a rule written down before the run: AR(2) won on GDP but lost on inflation and unemployment, which now ship a no-change forecast. IMF forecasts still beat AR(2) in 142 of 185 economies. Weekly US gas-storage forecasts beat the five-year seasonal norm by 5% over 561 weeks (Diebold–Mariano p = 0.004).</p>
               <dl class="stats">
-                <div><dt>21–25%</dt><dd>Lower forecast error than naive for Poland, Turkey and Indonesia</dd></div>
-                <div><dt>44/52</dt><dd>Countries where IMF forecasts beat the AR model, 1990–2025 (GDP error 1.89 vs. 2.26 pp)</dd></div>
+                <div><dt>8% / 20%</dt><dd>Lower GDP error than &ldquo;no change&rdquo;, one and three years ahead</dd></div>
+                <div><dt>93–96%</dt><dd>Of 2010–2025 outcomes inside 95% intervals calibrated on pre-2010 forecasts</dd></div>
               </dl>
-              <p class="tags">TypeScript · World Bank API</p>
+              <p class="tags">TypeScript · React · World Bank / EIA / ACLED APIs · LLM tool use</p>
               <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
             </div>
           </article>
@@ -336,6 +344,6 @@
     <span>© <span id="year"></span> Maximilian Wojciechowski</span>
     <a href="#top" data-label="Welcome">Back to the start ↑</a>
   </footer>
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

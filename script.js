@@ -190,10 +190,10 @@ function updateWork() {
 }
 
 // Screenshot deck: click, arrows or swipe to flip; it also turns by itself while on screen until someone takes over.
-$$('.deck').forEach(deck => {
+$$('.deck').forEach((deck, n) => {
   const slides = $$('.deck-slide', deck);
   const count = $('.deck-count', deck);
-  let front = 0, timer = 0, visible = false, touched = false, hovered = false, startX = null;
+  let front = 0, timer = 0, delay = 0, visible = false, touched = false, hovered = false, startX = null;
   const show = i => {
     front = (i + slides.length) % slides.length;
     slides.forEach((sl, j) => {
@@ -204,9 +204,11 @@ $$('.deck').forEach(deck => {
   };
   const autoplay = () => {
     clearInterval(timer);
-    if (visible && !touched && !hovered && !reduced) timer = setInterval(() => show(front + 1), 6000);
+    clearTimeout(delay);
+    // The second deck turns half a beat after the first, so they never flip together.
+    if (visible && !touched && !hovered && !reduced) delay = setTimeout(() => { timer = setInterval(() => show(front + 1), 6000); }, n * 3000);
   };
-  const flip = step => { touched = true; clearInterval(timer); show(front + step); };
+  const flip = step => { touched = true; clearInterval(timer); clearTimeout(delay); show(front + step); };
   $('.deck-prev', deck).addEventListener('click', () => flip(-1));
   $('.deck-next', deck).addEventListener('click', () => flip(1));
   $('.deck-stage', deck).addEventListener('click', () => flip(1));
