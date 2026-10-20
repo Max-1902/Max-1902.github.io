@@ -189,6 +189,20 @@ function updateWork() {
   progress.style.transform = `scaleX(${p})`;
 }
 
+// Screenshot gallery: open from the collage or the button, close with ×, Esc or a click outside an image.
+$$('[data-gallery]').forEach(el => el.addEventListener('click', () => {
+  const dialog = $(`#${el.dataset.gallery}`);
+  dialog.showModal();
+  dialog.scrollTop = 0;
+  document.documentElement.classList.add('gallery-open-page');
+}));
+$$('.gallery').forEach(dialog => {
+  dialog.addEventListener('close', () => document.documentElement.classList.remove('gallery-open-page'));
+  dialog.addEventListener('click', e => {
+    if (e.target.closest('.gallery-close') || !e.target.closest('figure, .kicker')) dialog.close();
+  });
+});
+
 let ticking = false;
 function onScroll() {
   if (ticking) return;

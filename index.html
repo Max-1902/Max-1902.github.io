@@ -113,11 +113,10 @@
           </article>
 
           <article class="room">
-            <figure class="shots">
-              <img src="images/macro-globe.webp" alt="Globe coloured by how far each country's life expectancy sits above or below what its GDP per capita predicts, next to the scatter plot (Spearman ρ = 0.86)" loading="lazy">
-              <img src="images/macro-military.webp" alt="Military spending vs GDP per capita: Spearman ρ = 0.16, knowing one tells you almost nothing about the other" loading="lazy">
-              <img src="images/macro-heatmap.webp" alt="Heatmap of Spearman correlations between 12 country indicators, with the data sources listed below" loading="lazy">
-              <img src="images/macro-forecast.webp" alt="Germany GDP growth forecast: AR(2) vs naive baseline with a 95% interval, backtest MAE 1.78 pp vs 1.81 pp" loading="lazy">
+            <figure class="shots" data-gallery="macro-gallery" title="See all screenshots">
+              <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators" loading="lazy">
+              <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline with a 95% interval and backtest errors" loading="lazy">
+              <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer comparing US and European equity ETFs, with a table and bar chart" loading="lazy">
             </figure>
             <div class="room-text">
               <p class="room-no">No. 02</p>
@@ -128,6 +127,7 @@
                 <div><dt>44/52</dt><dd>Countries where IMF forecasts beat the AR model, 1990–2025 (GDP error 1.89 vs. 2.26 pp)</dd></div>
               </dl>
               <p class="tags">TypeScript · World Bank API</p>
+              <button class="link gallery-open" type="button" data-gallery="macro-gallery">See all 8 screenshots <span>→</span></button>
               <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
             </div>
           </article>
@@ -301,6 +301,45 @@
     <span>© <span id="year"></span> Maximilian Wojciechowski</span>
     <a href="#top" data-label="Welcome">Back to the start ↑</a>
   </footer>
+  <!-- Full-size, uncropped screenshots for the macro project -->
+  <dialog class="gallery" id="macro-gallery" aria-label="Macroeconomic Forecasting System screenshots">
+    <button class="gallery-close" type="button" aria-label="Close">×</button>
+    <div class="gallery-body">
+      <p class="kicker">Macroeconomic Forecasting System</p>
+      <figure>
+        <img src="images/macro-workspace.webp" alt="Forecasts &amp; Analysis workspace: map of Europe next to a heatmap of Spearman correlations between 12 country indicators" loading="lazy">
+        <figcaption>The Forecasts &amp; Analysis workspace: live map next to what moves together across 12 indicators.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-predictions.webp" alt="United States real GDP growth: AR(2) forecast vs. a no-change baseline for the next three years, with a 95% interval and backtest errors" loading="lazy">
+        <figcaption>GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo;, with backtest errors, a significance test and an interval checked against past outcomes.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-analyst-etfs.webp" alt="AI analyst answer: US equity ETFs rose while European ETFs fell 1% to 1.9%, with a table and bar chart" loading="lazy">
+        <figcaption class="question"><span>Question asked to the AI analyst</span>&ldquo;How are US and European equity ETFs moving today, and what does the backtested forecast say about Germany&rsquo;s real GDP growth for the next three years? Show the chart and tell me how far I should trust it.&rdquo;</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-analyst-gdp.webp" alt="AI analyst answer, continued: Germany GDP forecast table and chart with 95% intervals, and how the model works" loading="lazy">
+        <figcaption>The same answer, continued: the Germany forecast, its chart, and how far to trust it. Every claim is tagged as dashboard data, background or inference.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-gas.webp" alt="Natural-gas storage forecast for next week, backtested on 561 weeks against the five-year seasonal norm" loading="lazy">
+        <figcaption>Weekly natural-gas storage forecast, backtested on 561 weeks: average miss 29.3 Bcf vs. 30.9 Bcf for the seasonal norm.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-energy.webp" alt="EIA crude oil and gasoline inventories against their five-year average and range" loading="lazy">
+        <figcaption>EIA crude and gasoline inventories against the five-year average and range for the same week.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-markets.webp" alt="Markets screen with ETF quotes, Germany's economy and trade partners, global energy trends, resource rents and oil inventories" loading="lazy">
+        <figcaption>The Markets screen: quotes, country economy and trade profiles, global trends and resources side by side.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/macro-vscode.webp" alt="VS Code with a C++ project open and Claude Code in the side panel" loading="lazy">
+        <figcaption>My setup: VS Code with Claude Code in the side panel.</figcaption>
+      </figure>
+    </div>
+  </dialog>
   <script src="script.js"></script>
 </body>
 </html>
