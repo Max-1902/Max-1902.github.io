@@ -60,13 +60,17 @@ function updateHero() {
   const p = reduced ? (raw > .5 ? 1 : 0) : ease(clamp(raw / .78));
   const vw = innerWidth, vh = innerHeight, small = vw < 640;
   const w0 = small ? vw * .62 : Math.min(vw * .3, 440);
-  const h0 = small ? vh * .44 : vh * .64;
+  const short = small && vh < 720;
+  const h0 = small ? vh * (short ? .27 : .32) : vh * .64;
   const w = w0 + (vw - w0) * p;
   const h = h0 + (vh - h0) * p;
   const r = (w0 / 2) * (1 - p);
   arch.style.width = `${w}px`;
   arch.style.height = `${h}px`;
   arch.style.borderRadius = `${r}px ${r}px 0 0`;
+  // On phones the arch starts higher to leave room for the intro below it
+  const top = short ? 34 : 38;
+  arch.style.top = small ? `${top + (50 - top) * p}%` : '';
   archImg.style.transform = `scale(${1.18 - .18 * p})`;
   heroFades.forEach(el => {
     el.style.opacity = 1 - clamp(p * 2.4);
