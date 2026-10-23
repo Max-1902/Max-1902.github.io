@@ -171,6 +171,12 @@ figure { margin: 0; }
 .tags { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--stone); margin: 0 0 22px; }
 .link { font-size: 14px; border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
 .link span { color: var(--clay); }
+.room-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+.dl-btn { display: inline-flex; align-items: center; gap: 8px; font: 500 14px/1 var(--sans); color: var(--bone); background: var(--ink); padding: 13px 22px; border-radius: 99px; white-space: nowrap; transition: background .4s var(--ease); }
+.dl-btn span { transition: transform .4s var(--ease); }
+.dl-btn:hover { background: var(--clay); }
+.dl-btn:hover span { transform: translateY(2px); }
+.dl-btn:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
 .work-progress { display: none; }
 
 @media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
