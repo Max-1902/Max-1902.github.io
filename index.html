@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#F1ECE4">
+  <meta name="theme-color" content="#0B0C0E">
   <meta name="description" content="Maximilian Wojciechowski — MS Computer Science at DePaul University, former DekaBank intern in Structuring &amp; Derivatives Trading. Seeking Summer 2027 internships.">
   <title>Maximilian Wojciechowski</title>
   <link rel="canonical" href="https://max-1902.github.io/">
@@ -16,232 +16,132 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Maximilian Wojciechowski — seeking Summer 2027 internships">
   <meta name="twitter:card" content="summary_large_image">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
-  <div class="intro-curtain" aria-hidden="true"><span>Maximilian Wojciechowski</span></div>
-  <div class="curtain" aria-hidden="true"><span></span></div>
-
-  <header class="site-header">
-    <a class="logo" href="#top" data-label="Welcome">M. Wojciechowski</a>
-    <nav class="nav" id="nav">
-      <a href="#about" data-label="About">About</a>
-      <a href="#work" data-label="Projects">Projects</a>
-      <a href="#journey" data-label="The route">Journey</a>
-      <a href="#details" data-label="Details">Details</a>
-      <a href="#contact" data-label="Contact">Contact</a>
-    </nav>
-    <a class="cv-btn" href="Maximilian_Wojciechowski_CV.pdf" download="Maximilian_Wojciechowski_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
-  </header>
-
-  <nav class="hops" aria-label="Where you are on the journey">
-    <svg class="hop-arcs" aria-hidden="true"></svg>
-    <ol>
-      <li><a href="#ch-0"><span>Chicago</span></a></li>
-      <li><a href="#ch-1"><span>Frankfurt</span></a></li>
-      <li><a href="#ch-2"><span>Berlin</span></a></li>
-      <li><a href="#ch-3"><span>New Orleans</span></a></li>
-      <li><a href="#ch-4"><span>Wichita</span></a></li>
-      <li><a href="#ch-5"><span>Germany</span></a></li>
-    </ol>
-    <span class="hop-marker" aria-hidden="true"></span>
+  <nav class="nav" aria-label="Sections">
+    <a href="#top" class="nav-home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+    <a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>About</a>
+    <a href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Work</a>
+    <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>Experience</a>
+    <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+    </button>
   </nav>
 
   <main id="top">
-    <!-- Hero: the arch opens up into a full-screen image as you scroll -->
-    <section class="hero">
-      <div class="hero-stage">
-        <p class="hero-kicker hero-fade">Chicago, IL</p>
-        <h1 class="hero-name">
-          <span class="hero-line hero-line-1 hero-fade">Maximilian</span>
-          <span class="hero-line hero-line-2 hero-fade"><em>Wojciechowski</em></span>
-        </h1>
-        <figure class="hero-arch"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
-        <p class="hero-intro hero-fade">CS Master's student at DePaul, focused on applied AI and computational finance. At DekaBank I built a news-to-portfolio mapping algorithm that's now going into production. <strong>Looking for a Summer 2027 internship in AI engineering, software engineering, or fintech.</strong></p>
-        <a class="hero-cue hero-fade" href="#work" data-label="Projects">See the work <span>↓</span></a>
-        <div class="hero-overlay">
-        </div>
+    <header class="hero">
+      <p class="status"><span class="dot" aria-hidden="true"></span>Open to Summer 2027 internships · Chicago, IL</p>
+      <h1>Applied AI and software, built for finance.</h1>
+      <p class="hero-intro">I’m Max, a CS Master’s student at DePaul, focused on applied AI and computational finance. At DekaBank I built a news-to-portfolio mapping algorithm that’s now going into production. Looking for a Summer 2027 internship in AI engineering, software engineering, or fintech.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="Maximilian_Wojciechowski_CV.pdf" download="Maximilian_Wojciechowski_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="#work">View work</a>
+      </div>
+      <ul class="facts">
+        <li><strong>MS Computer Science</strong>DePaul · GPA 3.8 / 4.0</li>
+        <li><strong>DekaBank</strong>Structuring &amp; Derivatives Trading</li>
+        <li><strong>BS Finance</strong>Data Analytics · New Orleans</li>
+        <li><strong>NCAA D1 Golf</strong>5 years · German National Team</li>
+      </ul>
+      <p class="scroll-cue" aria-hidden="true">Scroll<span></span></p>
+    </header>
+
+    <section class="section" id="about">
+      <p class="kicker">About</p>
+      <h2>I’m a Computer Science Master’s student at DePaul University, focused on applied AI for finance.</h2>
+      <div class="prose">
+        <p>My curiosity for programming and systems started during my Bachelor’s, where the question I kept coming back to was how systems actually work and how I could use them in finance. That led me to DePaul, where I’m pursuing a Master’s in Computer Science with a focus on AI engineering, computational finance, and systems.</p>
+        <p>One example of what I build is a fully local RAG system with an evaluation harness over SEC 10-K filings.</p>
+        <p>At DekaBank, in Structuring &amp; Derivatives Trading, I developed a regex-based algorithm that classifies news articles by issuer, category and country, which is currently being migrated into production. I also built an interactive world map prototype for the internal trading dashboard, presented it to senior engineers, and prepared internal wiki documentation on AI-assisted and agent-based coding workflows.</p>
+        <p>I speak German, English, and Polish.</p>
       </div>
     </section>
 
-    <!-- About: short intro right after the hero -->
-    <section class="about" id="about">
-      <div class="about-inner reveal">
-        <p class="kicker">About</p>
-        <p class="about-lead">I’m a Computer Science Master’s student at DePaul University, focused on <em>applied AI for finance.</em></p>
-        <div class="about-body">
-          <p>My curiosity for programming and systems started during my Bachelor’s, where the question I kept coming back to was how systems actually work and how I could use them in finance. That led me to DePaul, where I’m pursuing a Master’s in Computer Science with a focus on AI engineering, computational finance, and systems.</p>
-          <p>One example of what I build is a fully local RAG system with an evaluation harness over SEC 10-K filings.</p>
-          <p>At DekaBank, in Structuring &amp; Derivatives Trading, I developed a regex-based algorithm that classifies news articles by issuer, category and country, which is currently being migrated into production. I also built an interactive world map prototype for the internal trading dashboard, presented it to senior engineers, and prepared internal wiki documentation on AI-assisted and agent-based coding workflows.</p>
-          <p>I speak German, English, and Polish.</p>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="work">
+      <p class="kicker">Selected projects</p>
+      <h2>Things I’ve built.</h2>
 
-    <!-- Projects: a horizontal gallery, scrolled like walking through rooms -->
-    <section class="work" id="work">
-      <div class="work-sticky">
-        <div class="work-track">
-          <div class="work-intro">
-            <p class="kicker">Selected projects</p>
-            <h2>Things<br><em>I've built.</em></h2>
-            <p class="work-hint">Keep scrolling <span>→</span></p>
+      <article class="project">
+        <div class="project-text">
+          <p class="project-no">01</p>
+          <h3>Local RAG &amp; Evaluation Pipeline</h3>
+          <p>A fully local RAG pipeline over FY2025–26 10-K filings of 5 companies (Microsoft, NVIDIA, Tesla, Lockheed Martin, BlackRock), using hybrid dense + BM25 retrieval with no external API calls. Oracle tests showed generation, not retrieval, was the bottleneck.</p>
+          <dl class="stats">
+            <div><dt>0.87</dt><dd>Answer score on 65 hand-verified questions, vs. 0.24 without retrieval (95% bootstrap CIs)</dd></div>
+            <div><dt>0.92</dt><dd>Retrieval hit@5</dd></div>
+          </dl>
+          <p class="tags">Python · MLX · Llama 3.1 8B · Chroma</p>
+          <a class="link" href="https://github.com/Max-1902/local-rag-10k-eval" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+        </div>
+        <div class="shots shots-3">
+          <img src="images/rag-summary.webp" alt="Report summary: 0.87 answer score with RAG, 0.24 without retrieval, 0.92 retrieval hit@5" loading="lazy">
+          <img src="images/rag-oracle.webp" alt="Report page on the oracle test: perfect retrieval doesn't raise the score" loading="lazy">
+          <img src="images/rag-terminal.webp" alt="Terminal output of the oracle test run, oracle vs. RAG score per question" loading="lazy">
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-text">
+          <p class="project-no">02</p>
+          <h3>World of Data</h3>
+          <p>A live economic and geopolitical dashboard with forecasts computed in the browser and an AI analyst that answers by calling 27 live-data tools (World Bank, EIA, ACLED, market quotes), so it explains measured numbers instead of inventing them. Each model was chosen by a rolling-origin backtest across 217 economies (1990–2025) with a rule written down before the run: AR(2) won on GDP but lost on inflation and unemployment, which now ship a no-change forecast. IMF forecasts still beat AR(2) in 142 of 185 economies. Weekly US gas-storage forecasts beat the five-year seasonal norm by 5% over 563 weeks (Diebold–Mariano p = 0.004).</p>
+          <dl class="stats">
+            <div><dt>8% / 20%</dt><dd>Lower GDP error than &ldquo;no change&rdquo;, one and three years ahead</dd></div>
+            <div><dt>93–96%</dt><dd>Of 2010–2025 outcomes inside 95% intervals calibrated on pre-2010 forecasts</dd></div>
+          </dl>
+          <p class="tags">TypeScript · React · World Bank / EIA / ACLED APIs · LLM tool use</p>
+          <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+        </div>
+        <div class="gallery">
+          <figure><img src="images/macro-forecast.webp" alt="Germany real GDP growth since 2000 with the AR(2) forecast, a no-change baseline, the IMF projection and a 95% interval" loading="lazy"><figcaption>GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo; and the IMF&rsquo;s projection, with backtest errors and an interval labelled with the coverage it achieved.</figcaption></figure>
+          <figure><img src="images/macro-nowcast.webp" alt="GDP nowcast for Germany: this quarter's growth from industrial production, beside the figure Eurostat published" loading="lazy"><figcaption>GDP nowcast for EU economies: this quarter&rsquo;s growth from the months of industrial production already out, checked against what Eurostat later published.</figcaption></figure>
+          <figure><img src="images/macro-gas-storage.webp" alt="Natural-gas storage forecast for next week, backtested on 563 weeks against the five-year seasonal norm" loading="lazy"><figcaption>Weekly natural-gas storage forecast, backtested on 563 weeks: average miss 29.2 Bcf vs. 30.9 Bcf for the seasonal norm.</figcaption></figure>
+        </div>
+        <details class="more">
+          <summary>6 more screenshots</summary>
+          <div class="gallery">
+            <figure><img src="images/macro-drivers.webp" alt="Backtest table: six candidate indicators added to the GDP forecast, none of which improved it out of sample" loading="lazy"><figcaption>What drives growth: six candidate indicators added to the GDP forecast and scored out of sample against a bar fixed in advance. None improved it.</figcaption></figure>
+            <figure><img src="images/macro-exposure.webp" alt="Shock exposure: economies ranked by their sales to China as a share of their own GDP, with the assumption labelled" loading="lazy"><figcaption>Shock exposure: which economies a fall in Chinese demand reaches, as a share of their own GDP, with every step labelled as data, estimate or assumption.</figcaption></figure>
+            <figure><img src="images/macro-comovement.webp" alt="Heatmap of Spearman rank correlations between 12 country indicators" loading="lazy"><figcaption>What moves together: Spearman correlations between 12 indicators across countries, computed in the browser.</figcaption></figure>
+            <figure><img src="images/macro-outlook.webp" alt="Outlook page: where the world economy is heading, with IMF world, advanced and emerging growth since 2000" loading="lazy"><figcaption>The Outlook page: where the world economy is heading, from the IMF&rsquo;s World Economic Outlook, labelled as the IMF&rsquo;s projections.</figcaption></figure>
+            <figure><img src="images/macro-country.webp" alt="Country page for Germany: World Bank figures with their source and year, stale values flagged" loading="lazy"><figcaption>Country pages: every figure with its source and year and stale values flagged, then forecasts, trade, risk, infrastructure and news.</figcaption></figure>
+            <figure><img src="images/macro-map.webp" alt="Map with countries coloured by GDP per capita, its legend and coverage, and a regional conflict activity card" loading="lazy"><figcaption>Countries coloured by GDP per capita, with coverage and reporting years stated, beside regional conflict activity from UCDP.</figcaption></figure>
           </div>
+        </details>
+      </article>
 
-          <article class="room">
-            <figure class="docs">
-              <img src="images/rag-summary.webp" alt="Report summary: 0.87 answer score with RAG, 0.24 without retrieval, 0.92 retrieval hit@5" loading="lazy">
-              <img src="images/rag-oracle.webp" alt="Report page on the oracle test: perfect retrieval doesn't raise the score" loading="lazy">
-              <img src="images/rag-terminal.webp" alt="Terminal output of the oracle test run, oracle vs. RAG score per question" loading="lazy">
-            </figure>
-            <div class="room-text">
-              <p class="room-no">No. 01</p>
-              <h3>Local RAG &amp; Evaluation Pipeline</h3>
-              <p>A fully local RAG pipeline over FY2025–26 10-K filings of 5 companies (Microsoft, NVIDIA, Tesla, Lockheed Martin, BlackRock), using hybrid dense + BM25 retrieval with no external API calls. Oracle tests showed generation, not retrieval, was the bottleneck.</p>
-              <dl class="stats">
-                <div><dt>0.87</dt><dd>Answer score on 65 hand-verified questions, vs. 0.24 without retrieval (95% bootstrap CIs)</dd></div>
-                <div><dt>0.92</dt><dd>Retrieval hit@5</dd></div>
-              </dl>
-              <p class="tags">Python · MLX · Llama 3.1 8B · Chroma</p>
-              <a class="link" href="https://github.com/Max-1902/local-rag-10k-eval" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
-            </div>
-          </article>
-
-          <article class="room room-wide">
-            <figure class="decks">
-              <div class="deck" aria-roledescription="carousel" aria-label="Forecast and analysis screenshots">
-                <div class="deck-stage">
-                  <div class="deck-slide">
-                    <img src="images/macro-forecast.webp" alt="Germany real GDP growth since 2000 with the AR(2) forecast, a no-change baseline, the IMF projection and a 95% interval">
-                    <p class="deck-cap">GDP forecast for any of 217 economies: AR(2) vs. &ldquo;no change&rdquo; and the IMF&rsquo;s projection, with backtest errors and an interval labelled with the coverage it achieved.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-nowcast.webp" alt="GDP nowcast for Germany: this quarter's growth from industrial production, beside the figure Eurostat published">
-                    <p class="deck-cap">GDP nowcast for EU economies: this quarter&rsquo;s growth from the months of industrial production already out, checked against what Eurostat later published.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-gas-storage.webp" alt="Natural-gas storage forecast for next week, backtested on 563 weeks against the five-year seasonal norm">
-                    <p class="deck-cap">Weekly natural-gas storage forecast, backtested on 563 weeks: average miss 29.2 Bcf vs. 30.9 Bcf for the seasonal norm.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-drivers.webp" alt="Backtest table: six candidate indicators added to the GDP forecast, none of which improved it out of sample">
-                    <p class="deck-cap">What drives growth: six candidate indicators added to the GDP forecast and scored out of sample against a bar fixed in advance. None improved it.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-exposure.webp" alt="Shock exposure: economies ranked by their sales to China as a share of their own GDP, with the assumption labelled">
-                    <p class="deck-cap">Shock exposure: which economies a fall in Chinese demand reaches, as a share of their own GDP, with every step labelled as data, estimate or assumption.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-comovement.webp" alt="Heatmap of Spearman rank correlations between 12 country indicators">
-                    <p class="deck-cap">What moves together: Spearman correlations between 12 indicators across countries, computed in the browser.</p>
-                  </div>
-                </div>
-                <div class="deck-nav">
-                  <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
-                  <span class="deck-count">1 / 6</span>
-                  <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
-                </div>
-              </div>
-              <div class="deck" aria-roledescription="carousel" aria-label="Outlook, country and map screenshots">
-                <div class="deck-stage">
-                  <div class="deck-slide">
-                    <img src="images/macro-outlook.webp" alt="Outlook page: where the world economy is heading, with IMF world, advanced and emerging growth since 2000">
-                    <p class="deck-cap">The Outlook page: where the world economy is heading, from the IMF&rsquo;s World Economic Outlook, labelled as the IMF&rsquo;s projections.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-country.webp" alt="Country page for Germany: World Bank figures with their source and year, stale values flagged">
-                    <p class="deck-cap">Country pages: every figure with its source and year and stale values flagged, then forecasts, trade, risk, infrastructure and news.</p>
-                  </div>
-                  <div class="deck-slide">
-                    <img src="images/macro-map.webp" alt="Map with countries coloured by GDP per capita, its legend and coverage, and a regional conflict activity card">
-                    <p class="deck-cap">Countries coloured by GDP per capita, with coverage and reporting years stated, beside regional conflict activity from UCDP.</p>
-                  </div>
-                </div>
-                <div class="deck-nav">
-                  <button type="button" class="deck-prev" aria-label="Previous screenshot">←</button>
-                  <span class="deck-count">1 / 3</span>
-                  <button type="button" class="deck-next" aria-label="Next screenshot">→</button>
-                </div>
-              </div>
-              <p class="deck-hint">Click a screenshot or use the arrows to flip through all 9.</p>
-            </figure>
-            <div class="room-text">
-              <p class="room-no">No. 02</p>
-              <h3>World of Data</h3>
-              <p>A live economic and geopolitical dashboard with forecasts computed in the browser and an AI analyst that answers by calling 27 live-data tools (World Bank, EIA, ACLED, market quotes), so it explains measured numbers instead of inventing them. Each model was chosen by a rolling-origin backtest across 217 economies (1990–2025) with a rule written down before the run: AR(2) won on GDP but lost on inflation and unemployment, which now ship a no-change forecast. IMF forecasts still beat AR(2) in 142 of 185 economies. Weekly US gas-storage forecasts beat the five-year seasonal norm by 5% over 563 weeks (Diebold–Mariano p = 0.004).</p>
-              <dl class="stats">
-                <div><dt>8% / 20%</dt><dd>Lower GDP error than &ldquo;no change&rdquo;, one and three years ahead</dd></div>
-                <div><dt>93–96%</dt><dd>Of 2010–2025 outcomes inside 95% intervals calibrated on pre-2010 forecasts</dd></div>
-              </dl>
-              <p class="tags">TypeScript · React · World Bank / EIA / ACLED APIs · LLM tool use</p>
-              <a class="link" href="https://github.com/Max-1902/world-of-data" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
-            </div>
-          </article>
-
-          <article class="room">
-            <figure class="phones">
-              <img src="images/neo-jupiter.webp" alt="NEOTracker sky view with Jupiter selected, showing its distance and constellation" loading="lazy">
-              <img src="images/neo-sky.webp" alt="NEOTracker sky view tracking near-Earth asteroid 2018 VA2 over Chicago" loading="lazy">
-              <img src="images/neo-orbit.webp" alt="NEOTracker orbit playground with sliders for an asteroid's orbit" loading="lazy">
-            </figure>
-            <div class="room-text">
-              <p class="room-no">No. 03</p>
-              <h3>NEOTracker</h3>
-              <p>An iOS app that tracks asteroids passing Earth from live NASA near-Earth-object data, with 3D orbit views, an impact calculator, space news and guides. Held up to the sky, it shows what's directly overhead: planets, stars, galaxies and asteroids, with names, photos and distances. A GPS-based night-sky planner computes planet positions and rise/set times with Meeus/VSOP87 algorithms.</p>
-              <p class="tags">Swift · SwiftUI · SceneKit · NASA APIs</p>
-            </div>
-          </article>
+      <article class="project">
+        <div class="project-text">
+          <p class="project-no">03</p>
+          <h3>NEOTracker</h3>
+          <p>An iOS app that tracks asteroids passing Earth from live NASA near-Earth-object data, with 3D orbit views, an impact calculator, space news and guides. Held up to the sky, it shows what's directly overhead: planets, stars, galaxies and asteroids, with names, photos and distances. A GPS-based night-sky planner computes planet positions and rise/set times with Meeus/VSOP87 algorithms.</p>
+          <p class="tags">Swift · SwiftUI · SceneKit · NASA APIs</p>
         </div>
-        <div class="work-progress" aria-hidden="true"><span></span></div>
-      </div>
+        <div class="shots shots-phones">
+          <img src="images/neo-jupiter.webp" alt="NEOTracker sky view with Jupiter selected, showing its distance and constellation" loading="lazy">
+          <img src="images/neo-sky.webp" alt="NEOTracker sky view tracking near-Earth asteroid 2018 VA2 over Chicago" loading="lazy">
+          <img src="images/neo-orbit.webp" alt="NEOTracker orbit playground with sliders for an asteroid's orbit" loading="lazy">
+        </div>
+      </article>
     </section>
 
-    <!-- Journey: sticky arch on the left changes as each chapter scrolls by -->
-    <section class="journey" id="journey">
-      <div class="journey-head reveal">
-        <p class="kicker">The route</p>
-        <h2>Six chapters, <em>one path.</em></h2>
-        <p class="lede">Newest first: computer science, banking, finance, golf.</p>
-      </div>
-
-      <div class="journey-body">
-        <div class="journey-visual" aria-hidden="true">
-          <div class="plates">
-            <figure class="plate"><img src="images/hero.svg" alt=""></figure>
-            <figure class="plate"><img src="images/frankfurt.svg" alt=""></figure>
-            <figure class="plate"><img src="images/berlin.svg" alt=""></figure>
-            <figure class="plate"><img src="images/neworleans.svg" alt=""></figure>
-            <figure class="plate"><img src="images/wichita.svg" alt=""></figure>
-            <figure class="plate"><img src="images/germany.svg" alt=""></figure>
-          </div>
-        </div>
-
-        <ol class="chapters">
-          <li class="chapter" id="ch-0" data-index="0">
-            <figure class="chapter-img"><img src="images/hero.svg" alt="Illustration of the Chicago skyline over the lake at dusk"></figure>
-            <p class="chapter-no">Chapter VI <span class="here">I am here</span></p>
-            <p class="when">Expected March 2028</p>
-            <h3>Chicago</h3>
-            <p class="role">MS Computer Science · DePaul University</p>
-            <ul>
-              <li>GPA 3.8 / 4.0</li>
-              <li>Research interests: trading, machine learning for financial markets, AI engineering</li>
-              <li>Data Structures I–II, Computer Systems I–II, Discrete Mathematics, Python Programming</li>
-              <li>DePaul Computer Science Society</li>
-            </ul>
-          </li>
-
-          <li class="chapter" id="ch-1" data-index="1">
-            <figure class="chapter-img"><img src="images/frankfurt.svg" alt="Illustration of the Frankfurt skyline at night"></figure>
-            <p class="chapter-no">Chapter V</p>
-            <p class="when">Jun — Sep 2026</p>
-            <h3>Frankfurt</h3>
-            <p class="role">Intern, Structuring &amp; Derivatives Trading · DekaBank</p>
+    <section class="section" id="experience">
+      <p class="kicker">Experience</p>
+      <h2>Where I’ve worked.</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">Jun — Sep 2026<span>Frankfurt</span></p>
+          <div>
+            <h3>Intern, Structuring &amp; Derivatives Trading</h3>
+            <p class="org">DekaBank</p>
             <ul>
               <li>Developed a regex-based Python algorithm that processes thousands of dpa news articles and maps them to issuers and client portfolios, enabling scalable classification by issuer, category and country; currently being migrated into production</li>
               <li>Developed a rule-based Java engine for the automated classification of counterparties under the EU Capital Requirements Regulation (CRR), with a test suite validating edge cases and rule priorities</li>
@@ -249,110 +149,123 @@
               <li>Developed an interactive world map prototype for the internal trading dashboard using Claude (TypeScript), combining internal financial data with external economic indicators; presented it to senior engineers as a demonstration of AI-assisted development in a regulated banking environment</li>
               <li>Prepared internal wiki documentation on AI-assisted and agent-based coding workflows, using the world map as the case study</li>
             </ul>
-          </li>
+          </div>
+        </li>
+        <li>
+          <p class="when">Jun — Aug 2025<span>Berlin</span></p>
+          <div>
+            <h3>Intern, Financial Reporting &amp; Systems</h3>
+            <p class="org">SWOT Controlling GmbH</p>
+            <ul>
+              <li>Built P&amp;L and consolidation reports for a group of five companies and several external clients, standardizing financial data for accuracy and comparability</li>
+              <li>Built account mapping frameworks and automated Excel-based workflows to streamline financial data integration</li>
+              <li>Translated the firm’s controlling software from German to English, creating structured implementation files for the software engineers</li>
+              <li>Standardized reporting processes in a customer implementation project; supported system integration and client rollout alongside the CEO</li>
+              <li>Managed internal documentation in GitBook with version control through GitLab, and redesigned the user handbook</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">May — Aug 2024<span>Berlin</span></p>
+          <div>
+            <h3>Intern, Tax Accounting &amp; Audit</h3>
+            <p class="org">Schwanke &amp; von Schwerin</p>
+            <ul>
+              <li>Assisted senior accountants in preparing and reviewing financial statements for clients</li>
+              <li>Supported internal and external audits with audit preparation and document reviews, reducing filing errors by 15%; flagged 10% budget cost variances</li>
+              <li>Automated Excel checks that caught input errors from company software, improving data collection and reporting workflows</li>
+              <li>Researched compliance standards and best practices</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-          <li class="chapter" id="ch-2" data-index="2">
-            <figure class="chapter-img"><img src="images/berlin.svg" alt="Illustration of the Berlin TV tower"></figure>
-            <p class="chapter-no">Chapter IV</p>
-            <p class="when">Summers 2024 &amp; 2025</p>
-            <h3>Berlin</h3>
-            <div class="stint">
-              <p class="role">Intern, Financial Reporting &amp; Systems · SWOT Controlling GmbH <span>Jun — Aug 2025</span></p>
-              <ul>
-                <li>Built P&amp;L and consolidation reports for a group of five companies and several external clients, standardizing financial data for accuracy and comparability</li>
-                <li>Built account mapping frameworks and automated Excel-based workflows to streamline financial data integration</li>
-                <li>Translated the firm’s controlling software from German to English, creating structured implementation files for the software engineers</li>
-                <li>Standardized reporting processes in a customer implementation project; supported system integration and client rollout alongside the CEO</li>
-                <li>Managed internal documentation in GitBook with version control through GitLab, and redesigned the user handbook</li>
-              </ul>
-            </div>
-            <div class="stint">
-              <p class="role">Intern, Tax Accounting &amp; Audit · Schwanke &amp; von Schwerin <span>May — Aug 2024</span></p>
-              <ul>
-                <li>Assisted senior accountants in preparing and reviewing financial statements for clients</li>
-                <li>Supported internal and external audits with audit preparation and document reviews, reducing filing errors by 15%; flagged 10% budget cost variances</li>
-                <li>Automated Excel checks that caught input errors from company software, improving data collection and reporting workflows</li>
-                <li>Researched compliance standards and best practices</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="chapter" id="ch-3" data-index="3">
-            <figure class="chapter-img"><img src="images/neworleans.svg" alt="Illustration of a crescent moon seen through arched balconies over the river"></figure>
-            <p class="chapter-no">Chapter III</p>
-            <p class="when">Graduated May 2025</p>
-            <h3>New Orleans</h3>
-            <p class="role">BS Finance, Data Analytics Concentration · University of New Orleans</p>
+    <section class="section" id="education">
+      <p class="kicker">Education &amp; athletics</p>
+      <h2>Where I’ve studied.</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">Expected March 2028<span>Chicago</span></p>
+          <div>
+            <h3>MS Computer Science</h3>
+            <p class="org">DePaul University</p>
+            <ul>
+              <li>GPA 3.8 / 4.0</li>
+              <li>Research interests: trading, machine learning for financial markets, AI engineering</li>
+              <li>Data Structures I–II, Computer Systems I–II, Discrete Mathematics, Python Programming</li>
+              <li>DePaul Computer Science Society</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">Graduated May 2025<span>New Orleans</span></p>
+          <div>
+            <h3>BS Finance, Data Analytics Concentration</h3>
+            <p class="org">University of New Orleans</p>
             <ul>
               <li>Athletic and academic scholarship</li>
               <li>Student-athlete on the NCAA Division I men’s golf team, Southland Conference</li>
               <li>Privateer Blue Honors — Fall 2022, Spring 2023, Spring 2024</li>
               <li>Investments, Financial Modeling, Quantitative Methods, Data Analytics, Accounting</li>
             </ul>
-            <a class="link chapter-press" href="https://privateersports.com/sports/mens-golf/roster/maximilian-wojciechowski/6132" target="_blank" rel="noreferrer">Golf roster: UNO Privateers <span>↗</span></a>
-          </li>
-
-          <li class="chapter" id="ch-4" data-index="4">
-            <figure class="chapter-img"><img src="images/wichita.svg" alt="Illustration of Kansas wheat fields and grain silos at sunset"></figure>
-            <p class="chapter-no">Chapter II</p>
-            <p class="when">Aug 2020 — May 2022</p>
-            <h3>Wichita, Kansas</h3>
-            <p class="role">BA International Business · Wichita State University</p>
+            <a class="link" href="https://privateersports.com/sports/mens-golf/roster/maximilian-wojciechowski/6132" target="_blank" rel="noreferrer">Golf roster: UNO Privateers ↗</a>
+          </div>
+        </li>
+        <li>
+          <p class="when">Aug 2020 — May 2022<span>Wichita, Kansas</span></p>
+          <div>
+            <h3>BA International Business</h3>
+            <p class="org">Wichita State University</p>
             <ul>
               <li>Athletic and academic scholarship</li>
               <li>Member of the Wichita State men’s golf team; NCAA All-Academic Team, 2021–22</li>
               <li>Volunteered at The Lord’s Diner, serving meals in the Wichita community</li>
               <li>International Business, Principles of Macroeconomics, Introductory Business Statistics, Business Software: Excel</li>
             </ul>
-            <a class="link chapter-press" href="https://goshockers.com/sports/mens-golf/roster/max-wojciechowski/5974" target="_blank" rel="noreferrer">Golf roster: Wichita State <span>↗</span></a>
-          </li>
-
-          <li class="chapter" id="ch-5" data-index="5">
-            <figure class="chapter-img"><img src="images/germany.svg" alt="Illustration of a golf green with a flag in rolling hills"></figure>
-            <p class="chapter-no">Chapter I</p>
-            <p class="when">2018 — 2020</p>
-            <h3>Germany</h3>
-            <p class="role">German National Golf Team</p>
+            <a class="link" href="https://goshockers.com/sports/mens-golf/roster/max-wojciechowski/5974" target="_blank" rel="noreferrer">Golf roster: Wichita State ↗</a>
+          </div>
+        </li>
+        <li>
+          <p class="when">2018 — 2020<span>Germany</span></p>
+          <div>
+            <h3>German National Golf Team</h3>
             <p>Competed for the German National Golf Team from 2018 to 2020. Native German speaker, fluent in English and Polish.</p>
-            <a class="link chapter-press" href="https://www.berliner-zeitung.de/sport-leidenschaft/maximilian-wojciechowski-kann-sich-auf-das-siebener-eiser-verlassen-li.99876" target="_blank" rel="noreferrer">In the press: Berliner Zeitung <span>↗</span></a>
-          </li>
-        </ol>
+            <a class="link" href="https://www.berliner-zeitung.de/sport-leidenschaft/maximilian-wojciechowski-kann-sich-auf-das-siebener-eiser-verlassen-li.99876" target="_blank" rel="noreferrer">In the press: Berliner Zeitung ↗</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="skills">
+      <p class="kicker">Skills</p>
+      <h2>Skills &amp; interests.</h2>
+      <div class="cards">
+        <div class="card"><h3>Programming</h3><p>Python, Java, TypeScript, C<br>RAG (Chroma, BM25, MLX)<br>Tools: Git, Claude Code</p></div>
+        <div class="card"><h3>Business</h3><p>Excel (financial modeling)<br>PowerPoint<br>Bloomberg Terminal</p></div>
+        <div class="card"><h3>Languages</h3><p>German (native)<br>English (C2)<br>Polish (C2)</p></div>
+        <div class="card"><h3>Beyond the desk</h3><p>NCAA D1 Golf (5 years)<br>German National Golf Team (2018–2020)<br>Golf, geopolitics, cosmology, trading</p></div>
       </div>
     </section>
 
-    <section class="details" id="details">
-      <div class="details-head reveal">
-        <p class="kicker">The details</p>
-        <h2>Skills <em>&amp; interests.</em></h2>
-      </div>
-      <div class="details-grid">
-        <div class="detail reveal"><h3>Languages</h3><p>German (native)<br>English (C2)<br>Polish (C2)</p></div>
-        <div class="detail reveal"><h3>Programming</h3><p>Python, Java, TypeScript, C<br>RAG (Chroma, BM25, MLX)<br>Tools: Git, Claude Code</p></div>
-        <div class="detail reveal"><h3>Business</h3><p>Excel (financial modeling)<br>PowerPoint<br>Bloomberg Terminal</p></div>
-        <div class="detail reveal"><h3>Beyond the desk</h3><p>NCAA D1 Golf (5 years)<br>German National Golf Team (2018–2020)<br>Golf, geopolitics, cosmology, trading</p></div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <p class="kicker">The next chapter</p>
-        <h2>Let's <em>talk.</em></h2>
-        <p class="contact-note">Looking for a Summer 2027 internship.</p>
-        <a class="contact-email" href="mailto:mwojcie4@depaul.edu">mwojcie4@depaul.edu</a>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/maximilian-wojciechowski-97016b321" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-          <a href="https://github.com/Max-1902" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <span>Chicago, IL</span>
-        </div>
+    <section class="section contact" id="contact">
+      <p class="kicker">Contact</p>
+      <h2>Let’s talk.</h2>
+      <p class="contact-note">Looking for a Summer 2027 internship.</p>
+      <a class="contact-email" href="mailto:mwojcie4@depaul.edu">mwojcie4@depaul.edu</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="Maximilian_Wojciechowski_CV.pdf" download="Maximilian_Wojciechowski_CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/maximilian-wojciechowski-97016b321" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/Max-1902" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <span>© <span id="year"></span> Maximilian Wojciechowski</span>
+    <span>© <span id="year"></span> Maximilian Wojciechowski · Chicago, IL</span>
     <a class="footer-dl" href="https://github.com/Max-1902/cv-drafter/releases/latest/download/CV-Drafter-mac.zip" title="Mac app: open the download and double-click CV Drafter">CV Drafter for friends · Download for Mac <span aria-hidden="true">↓</span></a>
-    <a href="#top" data-label="Welcome">Back to the start ↑</a>
+    <a href="#top">Back to top ↑</a>
   </footer>
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
