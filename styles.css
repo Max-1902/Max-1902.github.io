@@ -87,7 +87,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .gallery { grid-template-columns: repeat(3, 1fr); }
 .gallery figcaption { margin-top: 8px; font-size: 12.5px; line-height: 1.5; color: var(--faint); }
 .more { margin-top: 16px; }
-.more summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); width: max-content; }
+.more summary { cursor: pointer; padding: 8px 0; font-size: 14px; font-weight: 600; color: var(--muted); width: max-content; }
 .more summary:hover { color: var(--text); }
 
 /* ---------- Timeline ---------- */
@@ -128,7 +128,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 }
 @media (max-width: 560px) {
   .nav { top: 10px; }
-  .nav svg, .nav-home { display: none; }
+  .nav svg, .nav .nav-home { display: none; }
   .nav a { padding: 7px 8px; font-size: 12.5px; }
   .theme-toggle svg { display: block; }
   .nav-sep { margin: 0 2px; }
@@ -136,4 +136,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .shots-3 { grid-template-columns: 1fr 1fr; }
   .shots-3 img:last-child { grid-column: 1 / -1; }
   .section { padding-block: 72px; }
+  .status { flex-wrap: wrap; justify-content: center; column-gap: 8px; row-gap: 0; border-radius: 18px; padding: 8px 16px; }
+  .status-sep { display: none; }
+  .status-loc { flex-basis: 100%; }
+}
+@media (max-width: 360px) {
+  .nav a { padding: 7px 6px; font-size: 12px; }
 }
