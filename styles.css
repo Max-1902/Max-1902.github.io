@@ -82,7 +82,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .shots, .gallery { display: grid; gap: 12px; margin-top: 28px; }
 .shots img, .gallery img { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); width: 100%; }
 .shots-3 { grid-template-columns: 1fr 1fr 1.3fr; align-items: start; }
-.shots-phones { grid-template-columns: repeat(4, minmax(0, 200px)); }
+.shots-phones { grid-template-columns: repeat(3, minmax(0, 200px)); }
 .shots-phones img { border-radius: 18px; }
 .gallery { grid-template-columns: repeat(3, 1fr); }
 .gallery figcaption { margin-top: 8px; font-size: 12.5px; line-height: 1.5; color: var(--faint); }
@@ -135,6 +135,5 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .facts, .cards, .gallery { grid-template-columns: 1fr; }
   .shots-3 { grid-template-columns: 1fr 1fr; }
   .shots-3 img:last-child { grid-column: 1 / -1; }
-  .shots-phones { grid-template-columns: 1fr 1fr; }
   .section { padding-block: 72px; }
 }
