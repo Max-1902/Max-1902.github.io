@@ -115,12 +115,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .contact-email { font-size: clamp(22px, 3vw, 32px); font-weight: 700; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
 .contact-email:hover { border-color: var(--text); }
 .contact .hero-actions { margin-top: 32px; }
-.cv-drafter { margin: 56px auto 0; max-width: 420px; padding: 24px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
-.cv-drafter-title { margin: 0 0 4px; font-weight: 700; }
-.cv-drafter-title span { font-weight: 400; color: var(--faint); }
-.cv-drafter-note { margin: 0 0 16px; font-size: 13px; color: var(--muted); }
-.cv-drafter-dl { border-color: var(--accent); }
-.cv-drafter-dl:hover { background: var(--accent); color: var(--btn-text); border-color: var(--accent); }
+.cv-drafter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; margin: 64px auto 0; max-width: 640px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); text-align: left; }
+.cv-drafter > div { flex: 1 1 260px; }
+.cv-drafter .btn { flex: none; }
+.cv-drafter-title { margin: 0 0 2px; font-size: 14px; font-weight: 600; }
+.cv-drafter-note { margin: 0; font-size: 13px; color: var(--muted); }
 
 /* ---------- Footer ---------- */
 .footer { max-width: 1040px; margin: 0 auto; padding: 28px 16px 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; font-size: 13px; color: var(--faint); }
