@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
   <nav class="nav" aria-label="Sections">
@@ -276,14 +276,30 @@
     <section class="section" id="downloads">
       <p class="kicker">Downloads</p>
       <h2>For friends.</h2>
-      <p class="section-note">Small tools I’ve built for friends. Free to download and use.</p>
-      <div class="cv-drafter">
-        <div>
-          <p class="cv-drafter-title">CV Drafter</p>
-          <p class="cv-drafter-note">Tailored CVs and cover letters, written only from true facts about you. Runs on your Claude plan.</p>
+      <p class="section-note">Tools I built for friends. Free to download.</p>
+
+      <article class="project">
+        <div class="project-text">
+          <p class="project-no">Mac app</p>
+          <h3>CV Drafter</h3>
+          <p>Paste a job posting and get a CV and cover letter tailored to it, written only from true facts about you. Every bullet and paragraph cites the facts it came from; rule checks in code and a separate AI fact-checker verify each statement, and nothing is rendered until the check passes. Names, dates and the document design are locked to your profile and a Word template, so the AI can only select and reword.</p>
+          <p>Each posting gets a fit verdict computed by fixed scoring logic, not the AI. Every application is logged with its status and a follow-up reminder, and your edits become style rules for the next draft. Everything stays on your Mac, and it runs on your Claude Pro or Max plan with no API key.</p>
+          <dl class="stats">
+            <div><dt>9</dt><dd>Honesty safeguards, from cited facts to a render gate that blocks unverified text</dd></div>
+            <div><dt>0–100</dt><dd>Fit score per posting, from fixed logic you can inspect</dd></div>
+          </dl>
+          <p class="tags">Python · Streamlit · Claude Sonnet &amp; Haiku · docxtpl · SQLite</p>
+          <div class="project-actions">
+            <a class="btn" href="https://github.com/Max-1902/cv-drafter/releases/latest/download/CV-Drafter-mac.zip" title="Open the download and double-click CV Drafter">Download for Mac <span aria-hidden="true">↓</span></a>
+            <a class="link" href="https://github.com/Max-1902/cv-drafter" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            <span class="project-meta">macOS 12+ · Apple Silicon &amp; Intel</span>
+          </div>
         </div>
-        <a class="btn" href="https://github.com/Max-1902/cv-drafter/releases/latest/download/CV-Drafter-mac.zip" title="Open the download and double-click CV Drafter">Download for Mac <span aria-hidden="true">↓</span></a>
-      </div>
+        <div class="gallery gallery-2">
+          <figure><img src="images/cvd-apply.webp" alt="CV Drafter Apply page: a tailored CV as editable text beside the rendered preview, with a Strong fit 100 verdict" loading="lazy"><figcaption>Apply: paste a posting, get a fit verdict and a tailored CV and letter, edited as plain text with a live preview.</figcaption></figure>
+          <figure><img src="images/cvd-overview.webp" alt="CV Drafter overview dashboard with application counts, recent applications, skills in demand and opportunity gaps" loading="lazy"><figcaption>Overview: applications and interview rate, the skills postings ask for most, and gaps worth filling.</figcaption></figure>
+        </div>
+      </article>
     </section>
   </main>
 

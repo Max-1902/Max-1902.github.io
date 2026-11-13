@@ -117,11 +117,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .contact .hero-actions { margin-top: 32px; }
 .section > h2:has(+ .section-note) { margin-bottom: 12px; }
 .section-note { margin: 0 0 32px; color: var(--muted); max-width: 60ch; }
-.cv-drafter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; max-width: 640px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); text-align: left; }
-.cv-drafter > div { flex: 1 1 260px; }
-.cv-drafter .btn { flex: none; }
-.cv-drafter-title { margin: 0 0 2px; font-size: 14px; font-weight: 600; }
-.cv-drafter-note { margin: 0; font-size: 13px; color: var(--muted); }
+.gallery-2 { grid-template-columns: 1fr 1fr; }
+.project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 20px; }
+.project-actions .link { margin-top: 0; }
+.project-meta { font-size: 13px; color: var(--faint); }
 
 /* ---------- Footer ---------- */
 .footer { max-width: 1040px; margin: 0 auto; padding: 28px 16px 40px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; font-size: 13px; color: var(--faint); }
