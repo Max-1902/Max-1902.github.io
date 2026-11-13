@@ -10,3 +10,8 @@ toggle.addEventListener('click', () => {
   label();
 });
 label();
+
+// Demo video: don't autoplay for visitors who ask for reduced motion (controls still let them play it).
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+}
