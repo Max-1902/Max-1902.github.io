@@ -128,8 +128,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .zoomable { cursor: zoom-in; transition: opacity .2s; }
 .zoomable:hover { opacity: .9; }
 .zoomable:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
-.lb { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; color: #F4F4F5; visibility: hidden; }
-.lb.is-open { visibility: visible; }
+.lb { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; color: #F4F4F5; visibility: hidden; touch-action: none; overscroll-behavior: contain; transition: visibility 0s .34s; }
+.lb.is-open { visibility: visible; transition: none; }
 .lb-backdrop { position: absolute; inset: 0; background: rgba(8,9,11,.94); opacity: 0; transition: opacity .3s ease; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .lb.is-open .lb-backdrop { opacity: 1; }
 .lb-stage { position: relative; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 64px 16px 12px; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }

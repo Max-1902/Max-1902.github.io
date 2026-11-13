@@ -44,7 +44,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
   // One set per project, including the screenshots behind "more screenshots".
   const groupOf = el => [...(el.closest('.project') || el.parentElement).querySelectorAll('.shots img, .gallery img')];
-  let group = [], idx = 0, opener = null, open = false;
+  let group = [], idx = 0, opener = null, open = false, busy = false;
   let scale = 1, tx = 0, ty = 0;
 
   let cur = [0, 0, 1];
@@ -58,6 +58,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const show = i => {
     idx = i;
     const t = group[i];
+    img.draggable = false;
     img.src = t.currentSrc || t.src;
     img.alt = t.alt;
     const fc = t.closest('figure')?.querySelector('figcaption');
@@ -78,11 +79,17 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   };
 
   const openAt = t => {
-    opener = t; group = groupOf(t); open = true;
+    if (open) return;
+    opener = t; group = groupOf(t); open = true; busy = false;
+    img.style.opacity = '';
+    backdrop.style.opacity = '';
     show(group.indexOf(t));
+    const sb = innerWidth - document.documentElement.clientWidth; // avoid a layout jump where scrollbars take space
     document.documentElement.style.overflow = 'hidden';
+    if (sb > 0) document.body.style.paddingRight = sb + 'px';
     lb.classList.add('is-open');
     const go = () => {
+      if (!open || group[idx] !== t) return;
       const f = fromThumb(t);
       if (f) { setT(...f, false); img.getBoundingClientRect(); }
       requestAnimationFrame(() => setT(0, 0, 1, true));
@@ -100,17 +107,23 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     if (f && !reduce) setT(...f, true); else { img.classList.add('lb-anim'); img.style.opacity = '0'; }
     lb.classList.remove('is-open');
     document.documentElement.style.overflow = '';
+    document.body.style.paddingRight = '';
     backdrop.style.opacity = '';
     setTimeout(() => { if (!open) { img.style.opacity = ''; img.removeAttribute('src'); resetZoom(false); } }, 330);
-    (t || opener)?.focus({ preventScroll: true });
+    const shown = el => el && (el.checkVisibility ? el.checkVisibility() : el.getClientRects().length > 0);
+    (shown(t) ? t : opener)?.focus({ preventScroll: true });
   };
 
   const step = dir => {
     const n = idx + dir;
+    if (busy || !open) return;
     if (n < 0 || n >= group.length) { setT(0, 0, 1, true); return; }
+    busy = true;
     const w = stage.clientWidth;
     setT(-dir * w, 0, 1, true);
     setTimeout(() => {
+      busy = false;
+      if (!open) return;
       show(n);
       setT(dir * w * .35, 0, 1, false);
       img.style.opacity = '0';
@@ -133,21 +146,24 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     setT(tx, ty, scale, anim);
   };
   const clampPan = () => {
-    const w = img.offsetWidth, h = img.offsetHeight;
-    const minX = Math.min(0, w - w * scale - (stage.clientWidth - w) / 2), maxX = Math.max(0, (stage.clientWidth - w) / 2);
-    const minY = Math.min(0, h - h * scale - (stage.clientHeight - h) / 2), maxY = Math.max(0, (stage.clientHeight - h) / 2);
-    tx = Math.min(maxX, Math.max(minX, tx)); ty = Math.min(maxY, Math.max(minY, ty));
+    // Keep the zoomed image covering the stage; centre it on an axis where it is smaller than the stage.
+    const fit = (t, start, size, room) => size <= room ? (room - size) / 2 - start : Math.min(-start, Math.max(room - size - start, t));
+    tx = fit(tx, img.offsetLeft, img.offsetWidth * scale, stage.clientWidth);
+    ty = fit(ty, img.offsetTop, img.offsetHeight * scale, stage.clientHeight);
   };
 
   // Pointer gestures: swipe, drag-to-close, pan, pinch, tap and double-tap.
   const pts = new Map();
-  let start = null, axis = null, pinch = null, lastTap = 0;
+  let start = null, axis = null, pinch = null, lastTap = 0, tapOutside = false;
   stage.addEventListener('pointerdown', e => {
+    tapOutside = false;
+    if (!open || busy) return;
     stage.setPointerCapture(e.pointerId);
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pts.size === 2) {
       const [a, b] = [...pts.values()];
-      pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), s: scale };
+      if (scale === 1) { resetZoom(false); backdrop.style.opacity = ''; }
+      pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, s: scale };
       start = null;
     } else if (pts.size === 1) {
       start = { x: e.clientX, y: e.clientY, tx, ty, t: Date.now(), onImg: e.target === img };
@@ -182,8 +198,9 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     if (Math.hypot(dx, dy) < 8 && dt < 300) { // tap
       const now = Date.now();
       if (s.onImg && now - lastTap < 300) { lastTap = 0; scale > 1 ? resetZoom(true) : zoomTo(2.5, e.clientX, e.clientY, true); }
-      else if (!s.onImg && scale === 1) close();
-      else lastTap = now;
+      else if (s.onImg) lastTap = now;
+      // A tap outside the image closes on the click event that follows, so the tap can't reach the page.
+      else if (scale === 1) tapOutside = true;
       return;
     }
     if (scale > 1) return;
@@ -203,7 +220,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   prevBtn.addEventListener('click', () => step(-1));
   nextBtn.addEventListener('click', () => step(1));
   closeBtn.addEventListener('click', close);
-  lb.addEventListener('click', e => { if (e.target === cap || e.target.classList.contains('lb-top')) close(); });
+  lb.addEventListener('click', e => { if ((e.target === stage && tapOutside) || e.target === cap || e.target.classList.contains('lb-top')) close(); });
   document.addEventListener('keydown', e => {
     if (!open) return;
     if (e.key === 'Escape') close();
