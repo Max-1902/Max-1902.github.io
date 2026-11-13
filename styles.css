@@ -47,7 +47,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .hero-intro { max-width: 560px; margin: 28px 0 0; color: var(--muted); font-size: 17px; }
 .hero-intro-next { margin-top: 14px; }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 36px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 99px; border: 1px solid var(--line); font-size: 14px; font-weight: 600; background: var(--surface); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 22px; border-radius: 99px; border: 1px solid var(--line); font-size: 14px; font-weight: 600; background: var(--surface); }
 .btn:hover { border-color: var(--muted); }
 .btn-primary { background: var(--btn-bg); color: var(--btn-text); border-color: var(--btn-bg); }
 .btn-primary:hover { opacity: .88; }
@@ -135,6 +135,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .timeline > li { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (max-width: 560px) {
+  .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 400px; margin-inline: auto; }
+  .hero-actions > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+  .hero-actions .btn { padding-inline: 12px; }
   .nav { top: 10px; }
   .nav svg, .nav .nav-home { display: none; }
   .nav a { padding: 7px 8px; font-size: 12.5px; }
