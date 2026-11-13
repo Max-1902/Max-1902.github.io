@@ -94,6 +94,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 /* ---------- Timeline ---------- */
 .timeline > li { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
 .timeline > li:first-child { border-top: 0; padding-top: 0; }
+.timeline > li:last-child { padding-bottom: 0; }
 .when { margin: 2px 0 0; font-size: 14px; font-weight: 600; }
 .when span { display: block; font-weight: 400; color: var(--faint); }
 .timeline h3 { font-size: 19px; font-weight: 700; }
